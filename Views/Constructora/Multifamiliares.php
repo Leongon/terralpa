@@ -14,7 +14,7 @@
   document.querySelector(".imgLogo").src = "<?= get_logo_constructora() ?>";
 
 </script>
-<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-masonry@0.10.12/dist/vue-masonry-plugin.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -46,49 +46,49 @@
 
         <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1IDV14JIXEFu60yvmEWJBTrx1r7_z_qGq'
+          <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/1-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=12bNKkNsB4ST9iE6z-caFw1EIeZlfMM0A'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/2-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1cwoybeIwacZCAk7StRS0nfnI0xu7yvo3'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/3-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1QTyI_7xa-6Obda5Vi2se70TW8CWeUsEq'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/4-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=14oqV3O1Z-hyRxPqfOuVZQOQUHcJdUkS4'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/5-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1pLvl7JtWUzBiccIX-CBLxW42KztgC3U9'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/6-min.jpg'
             width="100%" alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
           <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1ueeDbNtyyc_oEzI-kL-TCPxOxodVa4kp'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/7-min.jpg'
             width="100%" alt="First slide">
 
         </div>
@@ -580,36 +580,38 @@ Las casas multifamiliares tienen varias unidades de vivienda separadas, como apa
   const { createApp } = Vue
 
   img = [
-    'https://drive.google.com/uc?id=1SaxaS6LfLvRkyZheAxN7n95peRe3kNyy',
-    'https://drive.google.com/uc?id=121PtYKRZX4KhAIzGfpkdJwcrF0imQ4hW',
-    'https://drive.google.com/uc?id=1jhiI5BdhbNIBOjZzqsILe5-nnvuokCXu',
-    'https://drive.google.com/uc?id=1DtQbgaGYpkm9EKrCq_rf5R-t503CdVBw',
-    'https://drive.google.com/uc?id=1YcDJCaehrre8KvDd8UbcUOsPCBZHMBTu',
-    'https://drive.google.com/uc?id=1jc6HrqrZMGhgzkf0Gfj1PbXpbpVR3bhU',
-    'https://drive.google.com/uc?id=1GYAjen_dt9eBXE30_BEI-uKyHProfv-7',
-    'https://drive.google.com/uc?id=1XCMYsG9a_5dNWUtJfy5s63TTxkqZauUs',
-    'https://drive.google.com/uc?id=1lrQOWwvuAHvFBDDBLuectDXFBzuKiPSV',
-    'https://drive.google.com/uc?id=1nikU-NHBN_5J-BEO0NApo3Jcr_PrTKkK',
-    'https://drive.google.com/uc?id=1Q9BAhAaNCmve-6K91yQhItakCECyu3ln',
-    'https://drive.google.com/uc?id=1xzZ9zQ3GQ-UDtvAWxtJDGHdvGjeHBG5G',
-    'https://drive.google.com/uc?id=1xH94fJ8FMjtjkBe-1w_HxK-LbUR2tMaT',
-    'https://drive.google.com/uc?id=1CyrPe7oCPQEBbQkX1yRcoOlGcPsFWhDJ',
-    'https://drive.google.com/uc?id=1C1MqS8s96h0v-UwPL9EcyJlHBxBDyfp4',
-    'https://drive.google.com/uc?id=159VJ8y3ZSXH6P5mEC-cZPgqTaV_g3bVV',
-    'https://drive.google.com/uc?id=1pXhsRZ9eBH9UdgGCnsr1crTPVNMlp0Sa',
-    'https://drive.google.com/uc?id=1LwhCxOuA5gxBx86Bb1bS5jf_02sAribU',
-    'https://drive.google.com/uc?id=1InhPPqKHLViy3PxCFF89gtPu5PYIKfzI',
-    'https://drive.google.com/uc?id=1veTbVHY4xZ5bqkkTZdNn68g8Zl27xsJb',
-    'https://drive.google.com/uc?id=1J0ZRX-eK6mpJ21cp6esxWODVbV3AELU5',
-    'https://drive.google.com/uc?id=1aDrSncvXfs-vXnCDIVIVx1ymaCBDuCfB',
-    'https://drive.google.com/uc?id=1fc2yIC10KEoJyPlo_saXXQtIhjTacbok',
-    'https://drive.google.com/uc?id=1YwK5FCFMubAPd3AXcatFOvVQOPjCsCAN',
-    'https://drive.google.com/uc?id=1Qk76sQGUG3UWaYeuyqK4GY9YEcH4vUuv',
-    'https://drive.google.com/uc?id=1N43fWA1jOT5Ugn9wkUeq7WIVlakBoN_h',
-    'https://drive.google.com/uc?id=1ku0up2TIhhoNTdOQUw5MrF0bG4O9pGqv',
-    'https://drive.google.com/uc?id=1cpvTXRspiRBoqGnIsA6sHa0PKmG2ZXBH',
-    'https://drive.google.com/uc?id=1kBBW8ULljtkN8o6Z0mLNqy5KN4dToHlQ',
-    'https://drive.google.com/uc?id=1eIW8-KDo4JF6EOZKMJbMNpRKduZdUrPC',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/1-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/2-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/3-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/4-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/5-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/6-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/7-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/8-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/9-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/10-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/11-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/12-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/13-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/14-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/15-min.jpeg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/16-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/17-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/18-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/19-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/20-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/21-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/22-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/23-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/24-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/25-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/26-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/27-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/28-min.jpg',
+    '<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/29-min.jpg',
+  
+
+    
   ]
   app = {
     data() {
