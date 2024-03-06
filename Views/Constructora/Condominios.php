@@ -14,7 +14,7 @@
     document.querySelector(".imgLogo").src = "<?= get_logo_constructora() ?>";
 
 </script>
-<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-masonry@0.10.12/dist/vue-masonry-plugin.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -48,49 +48,49 @@
                 <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=14zsC8OUV7WUJrdEmRli7Rl32sXiovzb2" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/1.png" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=1TOz7eWbx2ot6_d_h66ZwLRecKVWfNmmI" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/2.png" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=19o3NrX-05cnFps3d1wSauE6VXR1CFpEv" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/3.jpeg" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=1zq8coPbac1mmCZDa3D09vXLkbyX3fkA7" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/4.jpeg" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=1lH6LeBLRdydv5ZgK2IDFwXDgfGemlRzC" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/5.jpeg" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=1WWgsthWh-y_VTEJkyr9Kqi3Gqrtsh28k" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/6.jpeg" width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src="https://drive.google.com/uc?id=1WACeZ547yvzkTZrR5Dd790pM92VKMLYK" width="100%"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/7.jpeg" width="100%"
                         alt="First slide">
 
                 </div>
@@ -136,7 +136,7 @@
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                         alt="500x500" style="width: 500px; height: 350px;"
-                        src="https://drive.google.com/uc?id=19o3NrX-05cnFps3d1wSauE6VXR1CFpEv"
+                        src="<?= ASSETS ?>/img/Constructora/Condominios/3.jpeg"
                         data-holder-rendered="true">
                 </div>
             </div>
@@ -577,9 +577,6 @@
         <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="" width="50">
     </a>
 
-
-
-
     <a class=" icons-hover-whastapp   " href="https://www.facebook.com/TERRALPA" target="_blank">
         <img src="<?= ASSETS ?>/img/inicio/face.png" alt="" width="50">
     </a>
@@ -593,20 +590,15 @@
 
     img = [
 
-        'https://drive.google.com/uc?id=14zsC8OUV7WUJrdEmRli7Rl32sXiovzb2',
-        'https://drive.google.com/uc?id=1TOz7eWbx2ot6_d_h66ZwLRecKVWfNmmI',
-        'https://drive.google.com/uc?id=19o3NrX-05cnFps3d1wSauE6VXR1CFpEv',
-        'https://drive.google.com/uc?id=1zq8coPbac1mmCZDa3D09vXLkbyX3fkA7',
-        'https://drive.google.com/uc?id=1lH6LeBLRdydv5ZgK2IDFwXDgfGemlRzC',
-        'https://drive.google.com/uc?id=1WWgsthWh-y_VTEJkyr9Kqi3Gqrtsh28k',
-        'https://drive.google.com/uc?id=1IjSJ0GkYiksApVnMvvxKcAlsjWuanrPM',
-        'https://drive.google.com/uc?id=10xtWYhOm4ZUITrqpMPv3EZDDeI0L634L',
-        'https://drive.google.com/uc?id=1b5ZxKq6u1vSx2eF3ITQzWMvGHICRzmcS',
-        'https://drive.google.com/uc?id=1p7Q-LdMzxtK1uWkEvUtDhPQejW4QL1w-',
-        'https://drive.google.com/uc?id=1zPo8QMcLapy5FuDT-UioIhsC88V3JypB',
-        'https://drive.google.com/uc?id=1l88Lf4ZZGeZWhZkckYrcZI69qbFN1kgi',
-        'https://drive.google.com/uc?id=1gxZZBRizAn266j1I0wCdxp5KGrsQRTs-',
-        'https://drive.google.com/uc?id=1WACeZ547yvzkTZrR5Dd790pM92VKMLYK',
+        '<?= ASSETS ?>/img/Constructora/Condominios/1.png',
+        '<?= ASSETS ?>/img/Constructora/Condominios/2.png',
+        '<?= ASSETS ?>/img/Constructora/Condominios/3.jpeg',
+        '<?= ASSETS ?>/img/Constructora/Condominios/4.jpeg',
+        '<?= ASSETS ?>/img/Constructora/Condominios/5.jpeg',
+        '<?= ASSETS ?>/img/Constructora/Condominios/6.jpeg',
+        '<?= ASSETS ?>/img/Constructora/Condominios/7.jpeg',
+        
+     
     ]
     app = {
         data() {
