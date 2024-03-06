@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'http://192.168.100.52/terralpa.com/';
+const base_url = 'http://192.168.100.52/terralpa';
 
 define('SITE_LANG', 'es');
 
