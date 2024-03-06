@@ -129,7 +129,7 @@ Las casas multifamiliares tienen varias unidades de vivienda separadas, como apa
         <div class="col-md-5">
           <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
             style="width: 500px; height: 350px;" src=
-'https://drive.google.com/uc?id=1buSceK--eiPUjZfcU2SgX_5fR9VhvwxP'
+'<?= ASSETS ?>/img/Constructora/MULTIFAMILIARES/7-min.jpg'
             data-holder-rendered="true">
         </div>
       </div>
