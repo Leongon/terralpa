@@ -1,0 +1,414 @@
+<?php
+
+$host = $_SERVER["HTTP_HOST"];
+$url = $_SERVER["REQUEST_URI"];
+$urlcapturado = "http://" . $host . $url;
+
+$id = $_GET['id'];
+?>
+
+<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<?php nav() ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+<!-- Demo styles -->
+
+<style>
+    #map {
+        height: 50vh;
+    }
+
+    .inmobiliaria {
+        color: #6B000D !important;
+
+    }
+
+    .nav-inmobiliaria {
+        background-color: #6B000D !important;
+
+    }
+
+
+    .activePhoto button {
+        border: none;
+        background-color: transparent;
+        font-size: 32px;
+        color: #fff;
+        opacity: 0.5;
+        position: absolute;
+        outline: none;
+        height: 100%;
+    }
+
+
+
+    .activePhoto button.previous {
+
+        left: 0;
+
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8    0000000', endColorstr='#00000000', GradientType=1);
+    }
+
+    .activePhoto button.next {
+
+        right: 0;
+
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    }
+
+    .thumbnails {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        grid-gap: 5px;
+        margin: auto;
+    }
+
+    .thumbnails div {
+
+        display: flex;
+        border: 2px solid #fff;
+        outline: 2px solid #fff;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        gap: 50px;
+
+    }
+
+    .thumbnails div:hover {
+        opacity: 0.6;
+    }
+
+    .thumbnails div.active {
+        outline-color: #5c4084;
+        opacity: 1;
+    }
+
+    .top {
+        margin-top: 8% !important;
+    }
+
+    .top-2 {
+        margin-top: 15% !important;
+    }
+
+    .vh-75 {
+        height: 60vh;
+    }
+
+    figure.goOnZoom {
+        position: relative;
+        width: 500px;
+        overflow: hidden;
+        cursor: zoom-in;
+    }
+
+    figure.goOnZoom img {
+        transition: opacity .5s;
+        display: block;
+        width: 100%;
+    }
+
+    figure.goOnZoom img:hover {
+        opacity: 0;
+    }
+
+    .card-modificado-3 {
+        background-color: #2a2626 !important;
+    }
+
+    .img-tumb {
+        object-fit: contain;
+        height: 100%;
+    }
+
+    @media (max-width: 600px) {
+
+
+        .vh-75 {
+            height: 50vh;
+
+        }
+
+        .vh-10 {
+            height: 5px !important;
+
+        }
+
+        .top {
+            margin-top: 15% !important;
+        }
+
+        .vh-60 {
+
+            height: 85vh;
+        }
+
+
+        .thumbnails {
+
+            grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+        }
+
+        .vh-60 {
+
+            height: 60vh;
+        }
+
+    }
+
+    @media (min-width: 600px) {
+        .vh-60 {
+
+            height: 75vh;
+        }
+
+
+    }
+
+    .swipers {
+        width: 240px;
+        height: 320px;
+    }
+
+
+    .swiper-slide {
+        background-color: #fff;
+    }
+
+    .swiper-slide {
+
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+    }
+</style>
+
+
+
+<!-- Swiper -->
+<div id="app">
+    <div class="swiper mySwiper">
+        <div class="vh-60 container-fluid swiper-wrapper">
+            <div class="swiper-slide" v-for="(imgPortadas, index) in imgPortada" :key="index">
+                <img :src="imgPortadas" class=" w-100 h-100 object-fit-cover" loading='lazy' />
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="container-fluid  ">
+        <div class="row  ">
+            <div class="col-lg-8 p-0 m-0  ">
+                <div class="d-flex flex-column w-100  position-relative ">
+                    <div class=" w-100 p-0 m-0">
+                        <h6
+                            class="card-title card-modificado-1 text-center w-100  text-light text-uppercase p-3 p-0    m-0">
+
+                            {{Tipo_inmuebl}}
+                            {{ distrito}}
+                            {{Terreno_venta}}
+                        </h6>
+
+                    </div>
+
+
+                    <div class="container-fluid">
+                        <vue-gallery :Precioss="precio" :photos="imagen" :titlle="titulo"></vue-gallery>
+                    </div>
+
+                    <div class="container-fluid text-center my-2">
+                            
+                    </div>
+
+
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-6  ">
+                                <div class="container mt-5 text-center">
+                                    <video src="https://drive.google.com/uc?id=15bKcZSnyeKc9lCwcSJNK6bVbEPcLRfBA"
+                                        width="300" height="400" controls>
+                                        <p>Su navegador no soporta vídeos HTML5.</p>
+                                    </video>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6  ">
+                                <div class="container position-relative my-3">
+                                    <H4 class="Card-modificado-2 text-center text-light">Ubicacion de terreno</H4>
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 Card-modificado-1  m-0 p-0 text-center" style="font-size: 14px;">
+                <div class="container-fluid mt-4 text-light ">
+                    <div class="container-fluid w-100 position-relative p-0 m-0 ">
+
+
+                        <p class="border-bottom text-center text-uppercase" style="font-size: 18px;"> Información del
+                            proyecto</p>
+
+                        <div
+                            class="container-fluid table-responsive text-align  Card-modificado-1  my-3  w-100 p-0 m-0  ">
+
+                            <table class="table w-100 text-light p-0 m-0 ">
+
+                                <tbody class=" w-100 p-0 m-0" style="font-size: 12px;">
+                                    <tr class="" style="font-size: 15px;">
+                                        <td class="text-uppercase">Precio :</td>
+                                        <td class="d-flex flex-column">
+                                            <div class="col-12 text-uppercase"><span> S/ {{precio}} </span>
+                                                <span>{{estado}}</span>
+                                            </div>
+
+                                            <div class="col-12 text-uppercase">{{Etapa_proyecto}}</div>
+                                            <a href="https://api.whatsapp.com/send?phone=51966006552&text= Hola Magaly, quisiera saber más sobre las propiedades, <?php echo $urlcapturado ?>"
+                                                target="_blank" type="button"
+                                                class="btn btn-danger  text-uppercase w-75"><i
+                                                    class="fab fa-whatsapp"></i>
+                                                Contactar</a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-uppercase">Dirección :</td>
+                                        <td> {{direccion}}, {{Terreno_venta}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-uppercase">Tipo de inmueble:</td>
+                                        <td>{{Tipo_inmuebl}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-uppercase">Área total:</td>
+                                        <td>{{area_total}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-uppercase">Documentación:</td>
+                                        <td>{{documnentacion}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-uppercase">Servicios:</td>
+                                        <td>{{servicios}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-uppercase">Detalles :</td>
+                                        <td>{{descripcion}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <h5 class="card-title">Descripción</h5>
+                                            <p class="card-text  " style="text-align:justify; font-size: 12px">{{floro}}
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <a href="<?php echo base_url ?>/Inmobiliaria" type="button" class="btn btn-danger btn-lg w-75 my-5  ">
+                    Ver más proyectos
+                </a>
+
+                <div class="swiper swipers  mySwipers">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="itemcard in Vender">
+                            <a :href="'<?php echo base_url; ?>/Inmobiliaria/Detalles?id='+ itemcard.id"
+                                style=" text-decoration: none;">
+                                <div class="card   p-0 m-0">
+                                    <img :src="itemcard.img[0] " class="card-img " alt="..." style="height: 10rem;">
+                                    <div class="card-img-overlay p-0 m-0" style="font-size: 10px;">
+                                        <p class="card-title  bg-danger w-50 text-center text-light m-0">S/ {{
+                                            itemcard.precio}}
+                                        </p>
+                                        <p class="card-title  bg-secondary w-50 text-center text-light ">{{
+                                            itemcard.Etapa_proyecto
+                                            }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-body text-dark p-1  w-100" style="font-size: 10px;">
+                                    <p class="card-title text-danger fw-bolder">{{ itemcard.Tipo_inmuebl}} {{
+                                        itemcard.Terreno_venta}}</p>
+                                    <p class="text-center">
+                                        <i class="fa-solid fa-location-dot text-danger " style="font-size: 25px;"></i>
+                                        <span>{{itemcard.direccion}}</span>
+                                    </p>
+                                    <p class="d-flex p-0 m-0  gap-2 text-center justify-content-center flex-column">
+                                        <span><i class="fa-solid fa-ruler-vertical text-danger"
+                                                style="margin-top:8px;"></i>
+                                            {{ itemcard.area_total}}</span>
+
+                                        <span> <i class="fa-solid fa-bed text-danger" style="margin-top:8px;"></i>
+                                            {{itemcard.part_terreno}}
+                                        </span>
+                                    </p>
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <?php footer() ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+
+        const ids = <?php echo $id ?>;
+    </script>
+
+    <script src="<?= ASSETS ?>/js/BD_inmo_detalles.js"></script>
+
+    <div class=" btn-group dropup position-fixed fixed-bottom d-flex gap-1 w-10">
+
+
+        <a class=" icons-hover-whastapp  "
+            href="https://api.whatsapp.com/send?phone=51966006552&text= Hola, me Interesa este terreno, <?php echo $urlcapturado ?>"
+            target="_blank">
+            <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="" width="50">
+        </a></br>
+
+        <a class=" icons-hover-whastapp   " href="https://www.facebook.com/TERRALPA" target="_blank">
+            <img src="<?= ASSETS ?>/img/inicio/face.png" alt="" width="50">
+        </a>
+    </div>

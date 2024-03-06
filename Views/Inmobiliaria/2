@@ -1,0 +1,93 @@
+props: {'photos':Object},
+    data: function () {
+        return {
+            activePhoto: null,
+            title: null,
+            currentIndex: 0,
+
+        }
+    },
+    template: `
+    <div class="container-fluid">
+        <div class="row" >
+     
+            <div class="col-lg-6 activePhoto " >
+                <div class="activePhoto text-center position-relative d-flex justify-content-center p-0 m-0  "  >
+                    <div class="container  p-0 m-0" style=" width: 410px;
+                    height:495px;">
+                    
+                        <img :src="photos[activePhoto].img" loading='lazy' class=" object-fit-cover  img-fluid w-100 h-100 "  alt="...">
+                        <a :href="photos[activePhoto].img" class="card-img-overlay border-none text-light  text-center  " data-fancybox="gallery">
+                        
+                                <h5 class=" w-100 text-uppercase card-modificado-1 position-absolute bottom-0  m-0 p-0 start-50 translate-middle-x  p-4">{{titlle[activePhoto]}}</h5>
+                        
+                        </a>
+                        <button type="button" aria-label="Previous Photo" class="previous p-0" @click="previousPhoto()">
+                                    <i class="fas fa-chevron-circle-left"></i>
+                        </button>
+                        <button type="button" aria-label="Next Photo p-0" class="next" @click="nextPhoto()">
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 activePhoto " >
+            <div class="container-fluid">
+                    <div class="thumbnails w-100">
+                        <div
+                            v-for="(photo, index) in photos"
+                            :src="photo"
+                            :class="{'active': activePhoto == index}" >
+                            <img :src="photo" class="img-fluid img-tumb" style="" @click="activePhoto = index"  alt="...">
+                            <a :href="photo" data-fancybox="gallery"> </a>
+                            
+                        </div>
+                    </div>
+            </div>
+            </div>
+          
+            
+        </div>
+    </div>
+    `,
+    mounted() {
+        this.play();
+
+        this.activePhoto = 0
+        document.addEventListener("keydown", (event) => {
+
+            if (event.which == 37) { this.previousPhoto() }
+            if (event.which == 39) { this.nextPhoto() }
+
+        });
+
+    },
+    methods: {
+        nextPhoto() {
+            this.activePhoto = (this.activePhoto + 1 < this.photos.length ? this.activePhoto + 1 : 0)
+            console.log(this.activePhoto)
+
+        },
+        previousPhoto() {
+            this.activePhoto = (this.activePhoto - 1 >= 0 ? this.activePhoto - 1 : this.photos.length - 1)
+        },
+        setAutoRoll() {
+            let vueSelf = this;
+            timer = setInterval(function () {
+                vueSelf.nextPhoto();
+            }, 10000
+            );
+        },
+        addIndex() {
+            let newIndex = this.currentIndex + 1;
+            this.currentIndex = newIndex === this.bannerList.length ? 0 : newIndex;
+        },
+        play() {
+            this.setAutoRoll();
+            this.playing = true;
+        },
+
+
+
+
+    }

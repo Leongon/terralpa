@@ -1,0 +1,242 @@
+
+const url = `${base_url}/Observaciones/listarS`;
+const url_save = `${base_url}/Observaciones/save`;
+const url_delet = `${base_url}/Observaciones/delet`;
+const url_buscar = `${base_url}/Observaciones/buscar_unregistro`;
+const url_update = `${base_url}/Observaciones/update`;
+const url_updatechk = `${base_url}/Observaciones/updatechk`;
+const url_roles = `${base_url}/Observaciones/rol`;
+
+btn_guardar = document.querySelector(".btn_guardar");
+btn_editar = document.querySelector(".btn-Editar");
+btn_modal = document.getElementById("btn-modal")
+
+txtObservaciones = document.querySelector(".txtObservaciones")
+txtcodigo=document.querySelector(".codigo")
+
+const titulo = document.querySelector(".titulo")
+
+const table = document.querySelector(".tablesdata")
+const form_Save = document.querySelector(".form-Save")
+
+var action = ""
+
+btn_modal.addEventListener('click', () => {
+    action = "Nuevo"
+    $('#Modal_productos').modal('show')
+    titulo.innerHTML = "Ingrese Observacion"
+})
+
+
+
+btn_guardar.addEventListener("click", (e) => {
+    e.preventDefault()
+    if (action == "Nuevo") {
+        form = new FormData(form_Save);
+        form_guardar(url_save, form);
+    }
+    if (action == "Editar") {
+
+        form = new FormData(form_Save);
+        form_guardar(url_update, form);
+    }
+
+})
+
+
+table.addEventListener("click", (e) => {
+
+    button = e.target;
+    if (button.type == "button") {
+        if (button.name == "Eliminar") {
+            console.log(button.id)
+            eliminar(button.id)
+        }
+        if (button.name == "editar") {
+            action = "Editar"
+            console.log(button.id)
+            console.log(action)
+            Buscar(button.id)
+             txtcodigo.value = button.id 
+            $('#Modal_productos').modal('show')
+            titulo.innerHTML = "Actualizar Observacion"
+        }
+
+    }
+
+})
+
+
+const render_lista = () => {
+    axios({
+        method: 'post',
+        url: url,
+    })
+        .then(function (response) {
+            table.innerHTML = ``;
+            console.log(response.data)
+            resultado = response.data;
+            cont = 0
+
+            for (const productos of resultado) {
+                cont++
+              
+                table.innerHTML += `
+                
+                <tr>
+                  
+                    <td>${productos.codigo}</td>
+                    <td class="descripcion">${productos.observaciones}</td>
+                    
+                    <td>
+                        <div class="dropdown">
+                            <a
+                                class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-toggle="dropdown"
+                            >
+                                <i class="dw dw-more"></i>
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                               
+                                <button type="button" class="dropdown-item btn-Editar" id="${productos.codigo}" name="editar">
+                                    <i class="dw dw-edit2"></i>
+                                    Editar
+                                </button>
+                                <button type="button" class="dropdown-item btn-Eliminar" id="${productos.codigo}" name="Eliminar">
+                                    <i class="dw dw-delete-3"></i>
+                                     Elminar
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            `;
+            }
+            $(".chkobeservacion").click(function() {
+               
+                if($(this).attr('checked')){
+                    $(this).attr('checked', false);
+                    $valor=0
+                }else{
+                    $(this).attr('checked', 'checked');
+                    $valor=1
+                }
+                
+                $codigo=$(this).val();
+                updatechk($codigo,$valor)
+              });
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+
+const form_guardar = (url, form) => {
+
+    axios({
+        method: 'post',
+        url: url,
+        data: form
+    })
+        .then(function (response) {
+            resultado = response.data
+            console.log(response.data)
+            if (resultado.status) {
+                swal(
+                    {
+                        type: 'success',
+                        title: "resultado.error",
+                        text: `${resultado.msg}`,
+                    }
+                )
+                render_lista()
+
+                var table = $('.data-table').DataTable();
+
+            } else {
+                swal(
+                    {
+                        type: 'error',
+                        title: "Error",
+                        text: `${resultado.error}`,
+                    }
+                )
+
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+const Buscar = ($dato) => {
+    form = new FormData()
+    form.append("codigo", $dato)
+    axios({
+        method: 'post',
+        url: url_buscar,
+        data: form
+    })
+        .then(function (response) {
+            
+            $codigoS = response.data.data.codigo
+           
+            if($codigoS==undefined){
+              
+              txtObservaciones.value=""
+            }else{
+             $observaciones=response.data.data.observaciones
+         
+            txtObservaciones.value=$observaciones
+          }
+        })
+}
+
+const updatechk = ($codigo,$estado) => {
+    form = new FormData()
+    form.append("codigo", $codigo)
+    form.append("estado", $estado)
+    axios({
+        method: 'post',
+        url: url_updatechk,
+        data: form
+    })
+        .then(function (response) {
+            resultado = response.data
+            console.log(response.data)
+            if (resultado.status) {
+                swal(
+                    {
+                        type: 'success',
+                        title: "resultado.error",
+                        text: `${resultado.msg}`,
+                    }
+                )
+                render_lista()
+
+                var table = $('.data-table').DataTable();
+
+            } else {
+                swal(
+                    {
+                        type: 'error',
+                        title: "Error",
+                        text: `${resultado.error}`,
+                    }
+                )
+
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+render_lista()

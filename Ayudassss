@@ -1,0 +1,130 @@
+ <div class="col-12 col-sm-6 col-lg-3   mb-3 ">
+      <div class="card   shadows bg-transparent border-0 mas " >
+      <a href="<?php echo base_url; ?>/Constructora/Condominios" class="text-light">
+        <img src="https://drive.google.com/uc?id=1co9ApbxLnXryPfnSL409OLubpw4AEBjf" alt="" width="100%" height="200">
+
+
+        <div class="card-body">
+          <h5 class="card-title text-center">CONDOMINIOS</h5>
+          <p class="card-text texto-justificado texto-justificado">El condominio es un derecho que tienen varias
+            personas propietarias de un mismo bien.
+            En el derecho latinoamericano se denomina condominio a las viviendas en régimen de propiedad horizontal.
+          </p>
+          <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Multifamiliares" class="text-light">
+        <img src="https://drive.google.com/uc?id=1SaxaS6LfLvRkyZheAxN7n95peRe3kNyy" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center">CASAS MULTIFAMILIARES</h5>
+          <p class="card-text texto-justificado texto-justificado">Una vivienda multifamiliar es aquella en la que una
+            construcción vertical u
+            horizontal está dividida en varias unidades de viviendas integradas que comparten el terreno como bien
+            común.</p>
+            <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-4 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas" >
+      <a href="<?php echo base_url; ?>/Constructora/Unifamiliares" class="text-light">
+        <img src="https://drive.google.com/uc?id=1W9DTqlPZLiTmZcG3MSEYoP0f93mkUCqU" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center ">CASAS UNIFAMILIARES</h5>
+          <p class="card-text texto-justificado">Las viviendas unifamiliares son aquellos inmuebles en los que habita
+            una sola
+            familia, tal y como su propio nombre indica.</p>
+            <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Campo" class="text-light">
+        <img src="https://drive.google.com/uc?id=1uaTPTn_lgPlQo-rhW8SpJjd1R5m1vldw" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center">CASAS DE CAMPO</h5>
+          <p class="card-text texto-justificado">Casa situada fuera de núcleos de población, generalmente señorial y
+            rodeada de tierras, que sirve para cuidar del cultivo, para pasar fines de semana de recreo o vacaciones, o para
+            ambas cosas a la vez.</p>
+            <p class="btn btn-danger">Ver Modelos</p>
+         </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Instituciones" class="text-light">
+        <img src="https://drive.google.com/uc?id=11FxUKk8g6e15aAvMyMWNUXc6P4RKwNIo" alt="" width="100%" height="200">
+
+
+        <div class="card-body">
+          <h5 class="card-title text-center">INSTITUCIONES </h5>
+          <p class="card-text texto-justificado">Organismo público o privado fundado para desempeñar una labor
+            cultural, científica,
+            política o social.
+
+          </p>
+          <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Comerciales" class="p-0 m-0 text-light">
+        <img src="https://drive.google.com/uc?id=1Y56_PbVoHEQVYYfMi9zDiBrZIl1z-X_V" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center">EDIFICIOS COMERCIALES</h5>
+          <p class="card-text texto-justificado">El comercio es una actividad económica del sector terciario que se
+            basa en el
+            intercambio y transporte de bienes y servicios entre diversas personas o naciones.</p>
+          <p class="btn btn-danger">Ver Modelos</p>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Departamentos" class="text-light">
+        <img src="https://drive.google.com/uc?id=15bGkStdQVfEU-IO_TuGdMaXo1zZbA4SV" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center">DEPARTAMENTOS</h5>
+          <p class="card-text texto-justificado">Se define regularmente como una pequeña vivienda, con una o dos
+            habitaciones o
+            habitaciones, cocina y baño, diseñadas para habitar una persona o una familia y que se encuentra con
+            otras de características similares en la misma planta, que forman un edificio.</p>
+            <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3 mb-3 ">
+      <div class="card card-modificado-1 shadows bg-transparent border-0 mas">
+      <a href="<?php echo base_url; ?>/Constructora/Interiores" class="text-light">
+        <img src="https://drive.google.com/uc?id=1fsztT9Mjwhi1IPoNk7BVSx5MKN7jMgxb" alt="" width="100%" height="200">
+        <div class="card-body">
+          <h5 class="card-title text-center">DISEÑO DE INTERIORES</h5>
+          <p class="card-text texto-justificado">Los diseñadores de interiores son especialistas en la planificación y
+            realización de
+            los espacios, trabajan desde la elaboración de los planos iniciales hasta la colocación del último
+            detalle.
+          </p>
+            <p class="btn btn-danger">Ver Modelos</p>
+          </a>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,10 @@
+body{
+  background: rgba(0, 0, 0, 0);
+}
+.bg-nav-red{
+    
+  background: linear-gradient(rgba(87, 5, 5, 0.9), rgba(0, 0, 0, 0.3));
+  backdrop-filter: blur(1px);
+ 
+}
+/* ----------------------------------- */
