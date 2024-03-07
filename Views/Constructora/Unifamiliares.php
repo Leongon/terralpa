@@ -46,43 +46,43 @@
 
         <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (1).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(1).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (2).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(2).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (3).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(3).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (4).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(4).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (5).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(5).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (6).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(6).jpg" width="100%"
             alt="First slide">
 
         </div>
         <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (7).jpg" width="100%"
+          <img class="first-slide img-top-full" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar(7).jpg" width="100%"
             alt="First slide">
 
         </div>
@@ -580,7 +580,7 @@ const url_inicial='<?= ASSETS ?>';
 
         for (let step = 0; step < 47; step++) {
           // Se ejecuta 5 veces, con valores del paso 0 al 4.
-          this.img.push(url_inicial+'/img/Constructora/UNIFAMILIAR/unifamiliar ('+(step+1)+').jpg');
+          this.img.push(url_inicial+'/img/Constructora/UNIFAMILIAR/unifamiliar('+(step+1)+').jpg');
         }
 
         console.log(this.img)
