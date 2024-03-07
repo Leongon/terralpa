@@ -47,48 +47,48 @@
 
       <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1IDV14JIXEFu60yvmEWJBTrx1r7_z_qGq'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/interior/interior(1).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=12bNKkNsB4ST9iE6z-caFw1EIeZlfMM0A'
-          width="100%" alt="First slide">
-
-      </div>
-      <div class="carousel-item  vh-100" data-bs-interval="2000">
-
-        <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1cwoybeIwacZCAk7StRS0nfnI0xu7yvo3'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/interior/interior(2).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1QTyI_7xa-6Obda5Vi2se70TW8CWeUsEq'
+'<?= ASSETS ?>/img/Constructora/interior/interior(3).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=14oqV3O1Z-hyRxPqfOuVZQOQUHcJdUkS4'
+'<?= ASSETS ?>/img/Constructora/interior/interior(4).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1pLvl7JtWUzBiccIX-CBLxW42KztgC3U9'
+'<?= ASSETS ?>/img/Constructora/interior/interior(5).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1ueeDbNtyyc_oEzI-kL-TCPxOxodVa4kp'
+'<?= ASSETS ?>/img/Constructora/interior/interior(6).jpg'
+          width="100%" alt="First slide">
+
+      </div>
+      <div class="carousel-item  vh-100" data-bs-interval="2000">
+
+        <img class="first-slide img-top-full" src=
+'<?= ASSETS ?>/img/Constructora/interior/interior(7).jpg'
           width="100%" alt="First slide">
 
       </div>
@@ -129,7 +129,7 @@ El diseño de interiores implica planificar, diseñar y decorar un espacio habit
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
-          style="width: 500px; height: 350px;" src="https://drive.google.com/uc?id=1kMzpugy9MYJXJgqmKlzpiKJHEedquJ7v"
+          style="width: 500px; height: 350px;" src="<?= ASSETS ?>/img/Constructora/interior/interior(3).jpg"
           data-holder-rendered="true">
       </div>
     </div>
@@ -583,68 +583,60 @@ El diseño de interiores implica planificar, diseñar y decorar un espacio habit
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
+  const url_inicial = '<?= ASSETS ?>';
+  const { createApp } = Vue
 
-    const { createApp } = Vue
+  app = {
+    data() {
+      return {
+        img: [],
+      }
+    },
+    methods: {
+      async ListInmo() {
 
-    img = ['https://drive.google.com/uc?id=1IDV14JIXEFu60yvmEWJBTrx1r7_z_qGq',
-'https://drive.google.com/uc?id=12bNKkNsB4ST9iE6z-caFw1EIeZlfMM0A',
-'https://drive.google.com/uc?id=1cwoybeIwacZCAk7StRS0nfnI0xu7yvo3',
-'https://drive.google.com/uc?id=1QTyI_7xa-6Obda5Vi2se70TW8CWeUsEq',
-'https://drive.google.com/uc?id=14oqV3O1Z-hyRxPqfOuVZQOQUHcJdUkS4',
-'https://drive.google.com/uc?id=1pLvl7JtWUzBiccIX-CBLxW42KztgC3U9',
-'https://drive.google.com/uc?id=1ueeDbNtyyc_oEzI-kL-TCPxOxodVa4kp',
-'https://drive.google.com/uc?id=1buSceK--eiPUjZfcU2SgX_5fR9VhvwxP',
-'https://drive.google.com/uc?id=18XeNsmDL5yIOjORXJyirs7VwtIRZv69P',
-'https://drive.google.com/uc?id=1nRroGWL2h4pBF9IqgJAUDpALNNnQkDbo',
-'https://drive.google.com/uc?id=1LD9megBF9j6w9OAnN7bGh110Cgj9rrT5',
-'https://drive.google.com/uc?id=1kMzpugy9MYJXJgqmKlzpiKJHEedquJ7v',
-'https://drive.google.com/uc?id=1SpGfCGD-_Qh5ANArDNYqjvDrqI9dkVWh',
-    ]
-    app = {
-        data() {
-            return {
-                img: img,
-            }
-        },
-        methods: {
-            async ListInmo() {
-
-                console.log(this.img)
-            },
-            async masonry() {
-
-                var msnry = new Masonry('.grid', {
-                    percentPosition: true,
-                    columnWidth: 200,
-                    itemSelector: '.item-grid'
-                });
-            },
-            Fancybox() {
-                Fancybox.bind('[data-fancybox="gallery"]', {
-                    Thumbs: {
-                        type: "modern"
-                    }
-                });
-            },
-        },
-        mounted() {
-            this.ListInmo()
-            this.masonry()
-            this.Fancybox()
-        }, computed: {
-            /*  filteredList() {
-                 return this.Vender.filter(entry => {
-                     console.log(entry.departament)
-                     var id = entry.departament + ""
-                     return id.includes(this.searchterm)
-                 });
-             }  */
+        for (let step = 0; step < 13; step++) {
+          // Se ejecuta 5 veces, con valores del paso 0 al 4.
+          this.img.push(url_inicial + '/img/Constructora/interior/interior(' + (step + 1) + ').jpg');
         }
 
+        console.log(this.img)
+
+      },
+      async masonry() {
+
+        var msnry = new Masonry('.grid', {
+          percentPosition: true,
+          columnWidth: 200,
+          itemSelector: '.item-grid'
+        });
+      },
+      Fancybox() {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          Thumbs: {
+            type: "modern"
+          }
+        });
+      },
+    },
+    mounted() {
+      this.ListInmo()
+      this.masonry()
+      this.Fancybox()
+    }, computed: {
+      /*  filteredList() {
+           return this.Vender.filter(entry => {
+               console.log(entry.departament)
+               var id = entry.departament + ""
+               return id.includes(this.searchterm)
+           });
+       }  */
     }
 
-    var _app = createApp(app);
+  }
+
+  var _app = createApp(app);
 
 
-    var mountedApp = _app.mount('#app') 
+  var mountedApp = _app.mount('#app') 
 </script>

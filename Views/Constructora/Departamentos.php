@@ -47,44 +47,21 @@
                 <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1RSIEIUgAyyBmKhwzsqMgzbG2PyPo4TwG' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/depa/depa(1).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src= 'https://drive.google.com/uc?id=1H3BaQxQgWhUcBn7wz9kE-vI8ZKEni1Tw' width="100%"
+                        src= '<?= ASSETS ?>/img/Constructora/depa/depa(2).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src=
-        'https://drive.google.com/uc?id=15bGkStdQVfEU-IO_TuGdMaXo1zZbA4SV' width="100%"
-                        alt="First slide">
-
-                </div>
-                <div class="carousel-item  vh-100" data-bs-interval="2000">
-
-                    <img class="first-slide img-top-full"
-                        src=
-        'https://drive.google.com/uc?id=1Gi6z3n83tAXIKNGxY8N_jSx1J4qF5SvG' width="100%"
-                        alt="First slide">
-
-                </div>
-                <div class="carousel-item  vh-100" data-bs-interval="2000">
-
-                    <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1DoVobc9uH0zkIqhUpRDSXFHQNJuhOGH-' width="100%"
-                        alt="First slide">
-
-                </div>
-                <div class="carousel-item  vh-100" data-bs-interval="2000">
-
-                    <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1_ENUBvuefl0C583HZr0GOSWZH3mjW8c9' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/depa/depa(3).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -92,7 +69,29 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=1LOckaYNTYkIGW05KB-0rM-cMx7qEGMxp'
+        '<?= ASSETS ?>/img/Constructora/depa/depa(4).jpg' width="100%"
+                        alt="First slide">
+
+                </div>
+                <div class="carousel-item  vh-100" data-bs-interval="2000">
+
+                    <img class="first-slide img-top-full"
+                        src='<?= ASSETS ?>/img/Constructora/depa/depa(5).jpg' width="100%"
+                        alt="First slide">
+
+                </div>
+                <div class="carousel-item  vh-100" data-bs-interval="2000">
+
+                    <img class="first-slide img-top-full"
+                        src='<?= ASSETS ?>/img/Constructora/depa/depa(6).jpg' width="100%"
+                        alt="First slide">
+
+                </div>
+                <div class="carousel-item  vh-100" data-bs-interval="2000">
+
+                    <img class="first-slide img-top-full"
+                        src=
+        '<?= ASSETS ?>/img/Constructora/depa/depa(7).jpg'
          width="100%"
                         alt="First slide">
 
@@ -134,7 +133,7 @@
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                         alt="500x500" style="width: 500px; height: 350px;"
-                        src="https://drive.google.com/uc?id=1LOckaYNTYkIGW05KB-0rM-cMx7qEGMxp"
+                        src="<?= ASSETS ?>/img/Constructora/depa/depa(5).jpg"
                         data-holder-rendered="true">
                 </div>
             </div>
