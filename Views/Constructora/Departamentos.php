@@ -583,76 +583,60 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
+  const url_inicial = '<?= ASSETS ?>';
+  const { createApp } = Vue
 
-    const { createApp } = Vue
+  app = {
+    data() {
+      return {
+        img: [],
+      }
+    },
+    methods: {
+      async ListInmo() {
 
-    img = ['https://drive.google.com/uc?id=1RSIEIUgAyyBmKhwzsqMgzbG2PyPo4TwG',
-        'https://drive.google.com/uc?id=1H3BaQxQgWhUcBn7wz9kE-vI8ZKEni1Tw',
-        'https://drive.google.com/uc?id=15bGkStdQVfEU-IO_TuGdMaXo1zZbA4SV',
-        'https://drive.google.com/uc?id=1Gi6z3n83tAXIKNGxY8N_jSx1J4qF5SvG',
-        'https://drive.google.com/uc?id=1DoVobc9uH0zkIqhUpRDSXFHQNJuhOGH-',
-        'https://drive.google.com/uc?id=1_ENUBvuefl0C583HZr0GOSWZH3mjW8c9',
-        'https://drive.google.com/uc?id=1LOckaYNTYkIGW05KB-0rM-cMx7qEGMxp',
-        'https://drive.google.com/uc?id=11Ts8dGzb34mhM5jhJTZ0GEjkfavxD3Yp',
-        'https://drive.google.com/uc?id=1g3LsbKxryx7D5WIOQAQGA5fpTTQQ8NYa',
-        'https://drive.google.com/uc?id=1KXlMbKj_v1O20lm8uopNqSQjZcL-tGNn',
-        'https://drive.google.com/uc?id=10CQCOWzIKWYlKXh_ITvlDiUg0_7uS3et',
-        'https://drive.google.com/uc?id=1Gw5yRJ0eFeDSHOrWZ1r_OM9gvsRhkuaF',
-        'https://drive.google.com/uc?id=1zlGJuhAO0wKBXIYnwppFyPxLLSaqq6zL',
-        'https://drive.google.com/uc?id=12g6X0ROk3hue-ksy9tHYo80Key_pfujB',
-        'https://drive.google.com/uc?id=1gso1ccW84yWd6G3pxVkt7BwPirc8ZZBf',
-        'https://drive.google.com/uc?id=1Bub3qYlw-q7NwRpeJdWsFdzEVmXQ4rFV',
-        'https://drive.google.com/uc?id=1J-B93Arfpl0np-kmVz3MrgIR8BeaPUtI',
-        'https://drive.google.com/uc?id=1NaSpUwmDrBYBHqzTh8HKhxraFBd1tz_a',
-        'https://drive.google.com/uc?id=1JZHrviBZbShsQ0DtaBp7XRMbFc-ZfZoK',
-        'https://drive.google.com/uc?id=1uL_SJqF9dqIcSrKmDHlWaxVXOKzsgRRd',
-        'https://drive.google.com/uc?id=1mFIRFsehzsL9jIKbMISizB4jKf0rhH4l',
-    ]
-    app = {
-        data() {
-            return {
-                img: img,
-            }
-        },
-        methods: {
-            async ListInmo() {
-
-                console.log(this.img)
-            },
-            async masonry() {
-
-                var msnry = new Masonry('.grid', {
-                    percentPosition: true,
-                    columnWidth: 200,
-                    itemSelector: '.item-grid'
-                });
-            },
-            Fancybox() {
-                Fancybox.bind('[data-fancybox="gallery"]', {
-                    Thumbs: {
-                        type: "modern"
-                    }
-                });
-            },
-        },
-        mounted() {
-            this.ListInmo()
-            this.masonry()
-            this.Fancybox()
-        }, computed: {
-            /*  filteredList() {
-                 return this.Vender.filter(entry => {
-                     console.log(entry.departament)
-                     var id = entry.departament + ""
-                     return id.includes(this.searchterm)
-                 });
-             }  */
+        for (let step = 0; step < 22; step++) {
+          // Se ejecuta 5 veces, con valores del paso 0 al 4.
+          this.img.push(url_inicial + '/img/Constructora/depa/depa(' + (step + 1) + ').jpg');
         }
 
+        console.log(this.img)
+
+      },
+      async masonry() {
+
+        var msnry = new Masonry('.grid', {
+          percentPosition: true,
+          columnWidth: 200,
+          itemSelector: '.item-grid'
+        });
+      },
+      Fancybox() {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          Thumbs: {
+            type: "modern"
+          }
+        });
+      },
+    },
+    mounted() {
+      this.ListInmo()
+      this.masonry()
+      this.Fancybox()
+    }, computed: {
+      /*  filteredList() {
+           return this.Vender.filter(entry => {
+               console.log(entry.departament)
+               var id = entry.departament + ""
+               return id.includes(this.searchterm)
+           });
+       }  */
     }
 
-    var _app = createApp(app);
+  }
+
+  var _app = createApp(app);
 
 
-    var mountedApp = _app.mount('#app') 
+  var mountedApp = _app.mount('#app') 
 </script>

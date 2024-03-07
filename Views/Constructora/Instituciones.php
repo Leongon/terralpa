@@ -45,7 +45,7 @@
             <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                 <img class="first-slide img-top-full"
-                    src='https://drive.google.com/uc?id=11FxUKk8g6e15aAvMyMWNUXc6P4RKwNIo' width="100%"
+                    src='<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(1).jpg' width="100%"
                     alt="First slide">
 
             </div>
@@ -53,7 +53,7 @@
 
                 <img class="first-slide img-top-full"
                     src=
-'https://drive.google.com/uc?id=18PTNvdz328fO-1xw5akGo4Vo_2NQbj0Q' width="100%"
+'<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(2).jpg' width="100%"
                     alt="First slide">
 
             </div>
@@ -61,7 +61,7 @@
 
                 <img class="first-slide img-top-full"
                     src=
-'https://drive.google.com/uc?id=1KOrXPrUvZqBLxDHxuGQ3hybJ5qOdnXI8' width="100%"
+'<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(3).jpg' width="100%"
                     alt="First slide">
 
             </div>
@@ -69,7 +69,7 @@
 
                 <img class="first-slide img-top-full"
                     src=
-'https://drive.google.com/uc?id=1m41d_YTaEP8Ihlp9YLkrI6u2kKMXnsl4' width="100%"
+'<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(4).jpg' width="100%"
                     alt="First slide">
 
             </div>
@@ -77,7 +77,7 @@
 
                 <img class="first-slide img-top-full"
                     src=
-'https://drive.google.com/uc?id=1_i3qfmNi8FgMT4m9121bGBr06VpcrjVZ'
+'<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(5).jpg'
 
  width="100%"
                     alt="First slide">
@@ -86,14 +86,14 @@
             <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                 <img class="first-slide img-top-full"
-                    src='https://drive.google.com/uc?id=1jAalut7GBLbR5yALH5Xrc66tUH3puc0Y' width="100%"
+                    src='<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(6).jpg' width="100%"
                     alt="First slide">
 
             </div>
             <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                 <img class="first-slide img-top-full"
-                    src='https://drive.google.com/uc?id=1lSi75sCfOW4pBHAIMFL-r0gnUaG0k2M6' width="100%"
+                    src='<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(7).jpg' width="100%"
                     alt="First slide">
 
             </div>
@@ -134,7 +134,7 @@
             <div class="col-md-5">
                 <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                     alt="500x500" style="width: 500px; height: 350px;"
-                    src="https://drive.google.com/uc?id=1jAalut7GBLbR5yALH5Xrc66tUH3puc0Y" data-holder-rendered="true">
+                    src="<?= ASSETS ?>/img/Constructora/INSTITUCIONES/institucion(1).jpg" data-holder-rendered="true">
             </div>
         </div>
 
@@ -582,64 +582,60 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
+  const url_inicial = '<?= ASSETS ?>';
+  const { createApp } = Vue
 
-    const { createApp } = Vue
+  app = {
+    data() {
+      return {
+        img: [],
+      }
+    },
+    methods: {
+      async ListInmo() {
 
-    img = ['https://drive.google.com/uc?id=11FxUKk8g6e15aAvMyMWNUXc6P4RKwNIo',
-'https://drive.google.com/uc?id=18PTNvdz328fO-1xw5akGo4Vo_2NQbj0Q',
-'https://drive.google.com/uc?id=1KOrXPrUvZqBLxDHxuGQ3hybJ5qOdnXI8',
-'https://drive.google.com/uc?id=1m41d_YTaEP8Ihlp9YLkrI6u2kKMXnsl4',
-'https://drive.google.com/uc?id=1_i3qfmNi8FgMT4m9121bGBr06VpcrjVZ',
-'https://drive.google.com/uc?id=1jAalut7GBLbR5yALH5Xrc66tUH3puc0Y',
-'https://drive.google.com/uc?id=1lSi75sCfOW4pBHAIMFL-r0gnUaG0k2M6',
-'https://drive.google.com/uc?id=1AQ8k3ul28N_yiU7PYeYpk3vmKtImCM6M',
-'https://drive.google.com/uc?id=1LeU5oWn9EPjaxlzF0om15Qb3SwSCtiWm',
-    ]
-    app = {
-        data() {
-            return {
-                img: img,
-            }
-        },
-        methods: {
-            async ListInmo() {
-
-                console.log(this.img)
-            },
-            async masonry() {
-
-                var msnry = new Masonry('.grid', {
-                    percentPosition: true,
-                    columnWidth: 200,
-                    itemSelector: '.item-grid'
-                });
-            },
-            Fancybox() {
-                Fancybox.bind('[data-fancybox="gallery"]', {
-                    Thumbs: {
-                        type: "modern"
-                    }
-                });
-            },
-        },
-        mounted() {
-            this.ListInmo()
-            this.masonry()
-            this.Fancybox()
-        }, computed: {
-            /*  filteredList() {
-                 return this.Vender.filter(entry => {
-                     console.log(entry.departament)
-                     var id = entry.departament + ""
-                     return id.includes(this.searchterm)
-                 });
-             }  */
+        for (let step = 0; step < 9; step++) {
+          // Se ejecuta 5 veces, con valores del paso 0 al 4.
+          this.img.push(url_inicial + '/img/Constructora/INSTITUCIONES/institucion(' + (step + 1) + ').jpg');
         }
 
+        console.log(this.img)
+
+      },
+      async masonry() {
+
+        var msnry = new Masonry('.grid', {
+          percentPosition: true,
+          columnWidth: 200,
+          itemSelector: '.item-grid'
+        });
+      },
+      Fancybox() {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          Thumbs: {
+            type: "modern"
+          }
+        });
+      },
+    },
+    mounted() {
+      this.ListInmo()
+      this.masonry()
+      this.Fancybox()
+    }, computed: {
+      /*  filteredList() {
+           return this.Vender.filter(entry => {
+               console.log(entry.departament)
+               var id = entry.departament + ""
+               return id.includes(this.searchterm)
+           });
+       }  */
     }
 
-    var _app = createApp(app);
+  }
+
+  var _app = createApp(app);
 
 
-    var mountedApp = _app.mount('#app') 
+  var mountedApp = _app.mount('#app') 
 </script>
