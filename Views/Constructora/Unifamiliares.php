@@ -126,7 +126,7 @@
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
-            style="width: 500px; height: 350px;" src="https://drive.google.com/uc?id=1087-cllE9yTmu0xIJmcsCTR49qcckXiu"
+            style="width: 500px; height: 350px;" src="<?= ASSETS ?>/img/Constructora/UNIFAMILIAR/unifamiliar (7).jpg"
             data-holder-rendered="true">
         </div>
       </div>
