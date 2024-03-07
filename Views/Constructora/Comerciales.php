@@ -14,7 +14,7 @@
   document.querySelector(".imgLogo").src = "<?= get_logo_constructora() ?>";
 
 </script>
-<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-masonry@0.10.12/dist/vue-masonry-plugin.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />

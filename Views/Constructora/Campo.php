@@ -14,7 +14,7 @@
   document.querySelector(".imgLogo").src = "<?= get_logo_constructora() ?>";
 
 </script>
-<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-masonry@0.10.12/dist/vue-masonry-plugin.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -584,56 +584,22 @@
 
   const { createApp } = Vue
 
-  img = [
-    'https://drive.google.com/uc?id=12PNAiCYhnmDlsEtXO5ezNlEG9uNY3oQ-',
-    'https://drive.google.com/uc?id=16HID7khG8k-W4qxXecp_ADT_iVSFthRW',
-    'https://drive.google.com/uc?id=1xDpJC5-Z3TZCsEBCMHun9iLqFM26MpnU',
-    'https://drive.google.com/uc?id=1XPMGW4_Dp9nTl79W29wVHXrAeKXxTo7a',
-    'https://drive.google.com/uc?id=1zuzfAEMkzfistnfi2tgtUAUSScaLrbmN',
-    'https://drive.google.com/uc?id=17pk8GAjOtngWz0DcZ4IEoA_hT20q-0ph',
-    'https://drive.google.com/uc?id=1B3ntkiJZ0jeGkgsDoYOnSXWIOUOVQmXR',
-    'https://drive.google.com/uc?id=1LMWrUXdPxkMf1m7R5IAUQ3n92XUtMwYg',
-    'https://drive.google.com/uc?id=1lkvdA2ZNQ9yX8A2XK3R-pjgH1MJ-Z7y2',
-    'https://drive.google.com/uc?id=19GuKfKlw7m1LsXSTp376zI4b-Rl76qcL',
-    'https://drive.google.com/uc?id=1NJ_87Vpl9eq1jr2tgtccPBtwsKFb-fQl',
-    'https://drive.google.com/uc?id=130S2WlGJX_mxShmfNQ-HlQtPAqUGym4L',
-    'https://drive.google.com/uc?id=1wLKCOyG0KNim8mNjkq8II8WKuF-FyOc1',
-    'https://drive.google.com/uc?id=1VKL37qWuYs34sRbmA-lPHAUeVl2XSJVZ',
-    'https://drive.google.com/uc?id=1G4DZHCewjB1mu_OQVtF6d15NoqWNxbmX',
-    'https://drive.google.com/uc?id=11ofhTkQPYWOP-sjukF4bmgPEes3XBhjU',
-    'https://drive.google.com/uc?id=1AWc8bwTRYq8DqwSLWuIRIktQj4MCO-BN',
-    'https://drive.google.com/uc?id=1Xm21x4FG_sXKEm77BmPcBZU5Ds0ybh8V',
-    'https://drive.google.com/uc?id=1Ae6SbjOs5gzOonj0F3xk7zI61elf4P4m',
-    'https://drive.google.com/uc?id=1QXMAUvseM3cVVRgWiddFMxDCoA9pu1t4',
-    'https://drive.google.com/uc?id=1ULtxrdGlIZD683ePcDrqRWT2GM17aBlB',
-    'https://drive.google.com/uc?id=1jv1EZC9Sl8qZCu3gB6sb3xWqbYr4JiIq',
-    'https://drive.google.com/uc?id=1NHS3c_lDdev-ZiGC-U-6eIqsldiDLH0M',
-    'https://drive.google.com/uc?id=1V1UG-7ai4clP7uiZ08wb6CEZwHFUgIh5',
-    'https://drive.google.com/uc?id=17zjj0VPfN3zrDALtllWnOKeLV-j4Q-Fv',
-    'https://drive.google.com/uc?id=1vu_G9XzWsWVeROdHfAZqsqI8gQ-uVLnj',
-    'https://drive.google.com/uc?id=1uaTPTn_lgPlQo-rhW8SpJjd1R5m1vldw',
-    'https://drive.google.com/uc?id=1hSlWxYXSv6u29tAvOv3yno5kb3R1FdW9',
-    'https://drive.google.com/uc?id=1k2bDwsWvS2-3jae9eQzWs-238yioRso8',
-    'https://drive.google.com/uc?id=13FzBhiFLsisx5qPHV6b6TEUgDQek5BZH',
-  ]
   app = {
     data() {
       return {
-        img: img,
+        img:[],
       }
     },
     methods: {
       async ListInmo() {
 
-        console.log(this.img)
-      },
-      async masonry() {
+        for (let step = 0; step < 47; step++) {
+          // Se ejecuta 5 veces, con valores del paso 0 al 4.
+          this.img.push(url_inicial+'/img/Constructora/UNIFAMILIAR/unifamiliar('+(step+1)+').jpg');
+        }
 
-        var msnry = new Masonry('.grid', {
-          percentPosition: true,
-          columnWidth: 200,
-          itemSelector: '.item-grid'
-        });
+        console.log(this.img)
+
       },
       Fancybox() {
         Fancybox.bind('[data-fancybox="gallery"]', {

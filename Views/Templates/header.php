@@ -14,7 +14,7 @@
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-	<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="https://unpkg.com/vue-select@beta"></script>
 	<link rel="stylesheet" href="https://unpkg.com/vue-select/dist/vue-select.css">
 

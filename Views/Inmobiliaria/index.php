@@ -14,7 +14,7 @@
 document.querySelector(".imgLogo").src="<?= get_logo_inmobiliaria()?>";
 
 </script> 
-<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <!-- end-->
 <div id="app">
