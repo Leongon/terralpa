@@ -46,49 +46,49 @@
                 <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1OOVPawYPdx2gxx5stxQNcZQLiB1dy6nL' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(1).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1s0drqRbnolq4Wsxkj6hPVWGikFXtlIOQ' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(2).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1VzPnW-LdkgvZ58XSRUsf8CvRU2cXE075' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(3).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1bAdrRwJEsk_ElN9-ot7CDiBeFRm32etS' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(4).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1OZ9gtwmCzm3W9wxLbIrs4ptKX9kclDjn' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(5).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1onyB5vC6ZzE94YK5hjmnDQA0uidHuGcM' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(6).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1lj93Rh-Q4seXfCIW6S-Lz_uBmiK6yCZt' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(7).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -128,7 +128,7 @@
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                         alt="500x500" style="width: 500px; height: 350px;"
-                        src='https://drive.google.com/uc?id=1SmDGIUiSyU5zGFhvLl1_hUfz009BpbpH'
+                        src='<?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(7).jpg'
                         data-holder-rendered="true">
                 </div>
             </div>
@@ -574,57 +574,29 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-<script>
 
+<script>
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = ['https://drive.google.com/uc?id=1OOVPawYPdx2gxx5stxQNcZQLiB1dy6nL',
-        'https://drive.google.com/uc?id=1s0drqRbnolq4Wsxkj6hPVWGikFXtlIOQ',
-        'https://drive.google.com/uc?id=1VzPnW-LdkgvZ58XSRUsf8CvRU2cXE075',
-        'https://drive.google.com/uc?id=1bAdrRwJEsk_ElN9-ot7CDiBeFRm32etS',
-        'https://drive.google.com/uc?id=1OZ9gtwmCzm3W9wxLbIrs4ptKX9kclDjn',
-        'https://drive.google.com/uc?id=1onyB5vC6ZzE94YK5hjmnDQA0uidHuGcM',
-        'https://drive.google.com/uc?id=1lj93Rh-Q4seXfCIW6S-Lz_uBmiK6yCZt',
-        'https://drive.google.com/uc?id=1SmDGIUiSyU5zGFhvLl1_hUfz009BpbpH',
-        'https://drive.google.com/uc?id=1AMutaYLDMJLOGmSXoRunRkvHtP9A--lf',
-        'https://drive.google.com/uc?id=140bOSqE3YIDfUxq8irRoPbqOwRWGC2sW',
-        'https://drive.google.com/uc?id=1cFGLJ5Mwt0yuDrMRlZguYT6rL6o14bAR',
-        'https://drive.google.com/uc?id=1Ik78V6SnlnNoN7ynnhKE6gHU-slR9Tpj',
-        'https://drive.google.com/uc?id=1VI1rpiHA3TiehHtsanm_hitbL3HMYZjQ',
-        'https://drive.google.com/uc?id=1goRSteKuz67t6jkV9pg710v-taDIZB4r',
-        'https://drive.google.com/uc?id=1Nb3YRvrfKhnJ3D9LDs1DjCLUkwfihxci',
-        'https://drive.google.com/uc?id=1P86u_rqoosJbnMh8UePF2Cq3MxcS29n9',
-        'https://drive.google.com/uc?id=1EqG94Bw-ViiL9IAIUQ67UxKlkM-Ua9Pa',
-        'https://drive.google.com/uc?id=1Cdx4FwoEzJTzzsHZEpTPWF9YGLV8p4tS',
-        'https://drive.google.com/uc?id=1Xpy1Y05BgcETylv-vFIS10A1056o1HzW',
-        'https://drive.google.com/uc?id=1WijyhjEY-aiWusAxLThl4vUo3txLolCX',
-        'https://drive.google.com/uc?id=1X6Bgbh1qYPy_7Iv9U_jQb2T4XatPNlXY',
-        'https://drive.google.com/uc?id=16q_Brz5fxcxM6CcLg-OKnBB6dFvFE9ce',
-        'https://drive.google.com/uc?id=1idS7VC9FG0FlnugG27ke0m597zg-zD7y',
-        'https://drive.google.com/uc?id=11X_BDSXn76jAPliEhSISbO9oDCR4vd_I',
-        'https://drive.google.com/uc?id=1yoFJUqDx5KTVLGPU3iiwVp_4pWsLZ54i',
-        'https://drive.google.com/uc?id=1pOKgbBNySjQxmW5xBKGMNp69-xmUEKt7',
-        'https://drive.google.com/uc?id=1lfwJWh5UNWF0_hvckSpu9UK9R5sHmj2s',
-        'https://drive.google.com/uc?id=1-WM035nD8P0E0JmZbgijS2iLfIhRC2gj',
-        'https://drive.google.com/uc?id=1S78UJ88chhcA6FhwpitQuE07LMDD5MTJ',
-        'https://drive.google.com/uc?id=1EcOd5MqrgIWNRNzIQ7Aqo5zLoNFQwGjf',
-        'https://drive.google.com/uc?id=1FSz76H8jJf-UGxdeQTf-qRYyGoi7skXL',
-        'https://drive.google.com/uc?id=1x_QqQMr-U8AWh5OiPPWecfO0AgHzhL6N',
-        'https://drive.google.com/uc?id=1kpqwPyCwuMNK-Ja7Z1d7kA8aZNSMdegI',
-        'https://drive.google.com/uc?id=1XHOhnOim2nfyA_lmthek8ub43aHmXu2W',
-        'https://drive.google.com/uc?id=1VE0DGYo7boBPF8Rs1mmuvjE9Po2QuVGT',
-        'https://drive.google.com/uc?id=10gObEUT7__GRpXuxAcrAbgsNekQpQF-8',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 36; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    // <?= ASSETS ?>/img/Constructora/dormitorio/dormitorio(1).jpg
+                    this.img.push(url_inicial + '/img/Constructora/dormitorio/dormitorio(' + (step + 1) + ').jpg');
+                   
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 

@@ -44,48 +44,48 @@
 
       <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1iRNSHk-eMBGujyeLFN81p5TAXBlN2bFP'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/cocina/cocina(1).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1stFfKFOpBCVYdYoIq5665hWruaCw1yix'
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(2).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=173ZbHXEeGCmpwymL9aV49eCXoaEGiLjy'
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(3).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1kcoUTXOAAHuMqm80lLevaXv29cKMkc0t'
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(4).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1h1t2Bg8Ao1JxAOmDisqLj0xcTJf9XVgX'
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(5).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1WCuBVr4YRMfPOHbj9GDMOCBMF-IQ9xwR'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/cocina/cocina(6).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1CLjtc8vkXbMxGjGej0E5barcQ-L9mGpp'
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(7).jpg'
           width="100%" alt="First slide">
 
       </div>
@@ -125,7 +125,7 @@
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
           style="width: 500px; height: 350px;" src=
-'https://drive.google.com/uc?id=1klfd4KHTIiU6McmO5Li7H-OqQTucOoUa' data-holder-rendered="true">
+'<?= ASSETS ?>/img/Constructora/cocina/cocina(5).jpg' data-holder-rendered="true">
       </div>
     </div>
 
@@ -571,81 +571,25 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
-
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = ['https://drive.google.com/uc?id=1iRNSHk-eMBGujyeLFN81p5TAXBlN2bFP',
-'https://drive.google.com/uc?id=1stFfKFOpBCVYdYoIq5665hWruaCw1yix',
-'https://drive.google.com/uc?id=173ZbHXEeGCmpwymL9aV49eCXoaEGiLjy',
-'https://drive.google.com/uc?id=1kcoUTXOAAHuMqm80lLevaXv29cKMkc0t',
-'https://drive.google.com/uc?id=1h1t2Bg8Ao1JxAOmDisqLj0xcTJf9XVgX',
-'https://drive.google.com/uc?id=1WCuBVr4YRMfPOHbj9GDMOCBMF-IQ9xwR',
-'https://drive.google.com/uc?id=1CLjtc8vkXbMxGjGej0E5barcQ-L9mGpp',
-'https://drive.google.com/uc?id=1klfd4KHTIiU6McmO5Li7H-OqQTucOoUa',
-'https://drive.google.com/uc?id=1SoT7rqCR9NskOsbyoUU7eSEwU0et9fTn',
-'https://drive.google.com/uc?id=1uV7hV19ajNR-JbHQ0whpMF5oZ3iTLTxa',
-'https://drive.google.com/uc?id=1op8g9Pq6O858ts0e5WL0upPwhywNZELO',
-'https://drive.google.com/uc?id=1s0mTXojbN6OwytdCqWpvHcksxxIm1uGZ',
-'https://drive.google.com/uc?id=1v6elXVu9Uwrsq5e8a25JyOXV6AgODIlP',
-'https://drive.google.com/uc?id=10zJzw-KRutB572fcIBmpSpaF-nh_0EwS',
-'https://drive.google.com/uc?id=1DsDiEj-0tTuUX0ftk74ndU_3GdJXc-qw',
-'https://drive.google.com/uc?id=1TqFi_CssA_eOkTG_AB-_6r1cMOB-lGBU',
-'https://drive.google.com/uc?id=1Ot0ueQAvqCK5HHFP-lMtqXG8UsHZt7hX',
-'https://drive.google.com/uc?id=1FaqlnoTI3pcTCLQa7iXEOOdJ_A4M0Bur',
-'https://drive.google.com/uc?id=16dSnR8LjSVnzdx0TDnJrj2NMfOrHe2Xw',
-'https://drive.google.com/uc?id=1TKY_CTvu1r46lNh0r7sM20LzU1M-G5Eq',
-'https://drive.google.com/uc?id=1dEiyDbWl0UnFyJDjb07trEzW3MhEQ7Z4',
-'https://drive.google.com/uc?id=10pUAIyroRq8Gq8arYf3kevNKKAFCWZNu',
-'https://drive.google.com/uc?id=15_aRNuQkpbqrAXpdANknRaqRUL2zl9vb',
-'https://drive.google.com/uc?id=1T5Gplx_6zW2Ol8Li7sRfv65GabbLGE8o',
-'https://drive.google.com/uc?id=1P3__i10DHToQ6N1cwA1lzbE6iiBfx4Uh',
-'https://drive.google.com/uc?id=1wd3rcf15Pu2ghpq7qs10lA6HZkKeX8v8',
-'https://drive.google.com/uc?id=1klEl1XipcdaNwLuJR6N7i75Omk4AJcmm',
-'https://drive.google.com/uc?id=1aKkiQDZTC_Q5VgZKlMvtmF3gnhrzr7vo',
-'https://drive.google.com/uc?id=1eKRBy62kegP0dXoYLNKifwbbM7cqTDq_',
-'https://drive.google.com/uc?id=1XLdpBy6zTqOmB4T51HAm0IhBdfyzk3H8',
-'https://drive.google.com/uc?id=1wimb80VKKKI-0Hz5RST4KTbGTcAnb0ai',
-'https://drive.google.com/uc?id=1_az1eoHSOUlDJtF4mHUAuLy6B0wdN3Ot',
-'https://drive.google.com/uc?id=1ZfigoUr8ibK_EGrEvqrajxV37tytjuZ5',
-'https://drive.google.com/uc?id=1S2icHQtFUrf8I6FqFMAcxLMTZLHAtJk4',
-'https://drive.google.com/uc?id=1FYVjRt6f7vRyUFDG8eoATW3CVJEI-1g9',
-'https://drive.google.com/uc?id=144iclpldX5TTf5-zE2XcMn_rvZtB6Khv',
-'https://drive.google.com/uc?id=1_w9GtrMhrAkNO-0ZhkMqXW0PPg5_AsMP',
-'https://drive.google.com/uc?id=1MDWqID5M0ui7DTuPLKvxZHIVK_kmI_Xy',
-'https://drive.google.com/uc?id=1tJz3B4hUCkWpFQnQQ56A7w25s3fpxQIH',
-'https://drive.google.com/uc?id=1-rBv5Zg4JfWmyae_15jRwHTikuouIrCP',
-'https://drive.google.com/uc?id=10mKsRMv1KCEb_kc-E94myQdZwvLEUo1i',
-'https://drive.google.com/uc?id=1q9ov01MeY-C-eMK9rTYnqOd95WEEmTe9',
-'https://drive.google.com/uc?id=1PkSWlV8ibaOKfQb4fcgFi2JqqRocW6nw',
-'https://drive.google.com/uc?id=1vUxHoFc-3CycumaPR8rIbrkHcKfNvjGq',
-'https://drive.google.com/uc?id=1J9qXtjx2UFkhFd1njiVYO_OB5ACAqmz7',
-'https://drive.google.com/uc?id=1NdNQRtCJsr_eiRgQqIfnbD_-5ZMcNNSh',
-'https://drive.google.com/uc?id=1tAtE_pm6hJWEkEVPGiI4OjSWf1_5fA0M',
-'https://drive.google.com/uc?id=18hdKQdx_erO1ybeKzxdmNZv6VFX0bj0z',
-'https://drive.google.com/uc?id=1RME0n77o5K3HgLqe1xLCPF8ggZ5vB6Ss',
-'https://drive.google.com/uc?id=1fPCjOzzzaE6itYeqe19naaFd3-NfXN3w',
-'https://drive.google.com/uc?id=1M4B6EvIat4FTOd7eSUxGLEd4b_U29DCo',
-'https://drive.google.com/uc?id=1vh7UFZuHX_5Eth3dxQ6Jk33TRjeTRwx4',
-'https://drive.google.com/uc?id=1RvIOWmz2kvIqbf_3KlNaboI5H3uCwBfe',
-'https://drive.google.com/uc?id=1T25mKxKifPGXlsDJdvIeKurrJzCQuuT4',
-'https://drive.google.com/uc?id=1rVBptdCeNP-dJfEdJ1Y7N3D7goI6iu1R',
-'https://drive.google.com/uc?id=1DPQCSas3UHC2rDAO8PQxUeNDXOQsv4Ft',
-'https://drive.google.com/uc?id=1USVq6hQoLTU6jIGpDGHa3nZQ9gj_xnaD',
-'https://drive.google.com/uc?id=18owhgKmUk-eBD7FfU1E7dSx1VUiHlhqy',
-'https://drive.google.com/uc?id=1eLKtahYtq1MuHpbA3tSNFppN_4paK5bE',
-'https://drive.google.com/uc?id=1S46Zcz_w_eLchW7WZKi28hNFUwOqiGcA',
-'https://drive.google.com/uc?id=1kGFdUrb3BgORJtO5BxsyrPSP_Itl-2sC',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 61; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    this.img.push(url_inicial + '/img/Constructora/cocina/cocina(' + (step + 1) + ').jpg');
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 

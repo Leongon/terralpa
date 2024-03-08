@@ -44,43 +44,43 @@
 
       <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=129J_Ha6ocYOecrbbas8Jcdddr412IjhM'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(1).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=19uvW4OqvUmwq9JZU_7Xuyo6cRyL2V0Xz'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(2).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1DZ8r4eeB4Ea9sldfo4G5flEbhvOaE28f'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(3).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1YEDO-9CoB1ZIOM-bQ5o9mdqkhxYMRw2j'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(4).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=16JQSTqZRGylnW0b-Ja-0W-bmkEJN6x7Q'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(5).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1ooD6lWBfNJqlCWPsjnA3_ljnj6ZxsL23'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(6).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1R_jQnkpVtGFVJvaU3OQWZrwJ7Bonh6Aq'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(7).jpg'
           width="100%" alt="First slide">
 
       </div>
@@ -118,7 +118,7 @@
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
-          style="width: 500px; height: 350px;" src='https://drive.google.com/uc?id=128uFVRiknNZbz94EZ72eZogfvg51PV4X' data-holder-rendered="true">
+          style="width: 500px; height: 350px;" src='<?= ASSETS ?>/img/Constructora/piscina/piscina(4).jpg' data-holder-rendered="true">
       </div>
     </div>
 
@@ -563,41 +563,29 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-<script>
 
+<script>
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = ['https://drive.google.com/uc?id=129J_Ha6ocYOecrbbas8Jcdddr412IjhM',
-'https://drive.google.com/uc?id=19uvW4OqvUmwq9JZU_7Xuyo6cRyL2V0Xz',
-'https://drive.google.com/uc?id=1DZ8r4eeB4Ea9sldfo4G5flEbhvOaE28f',
-'https://drive.google.com/uc?id=1YEDO-9CoB1ZIOM-bQ5o9mdqkhxYMRw2j',
-'https://drive.google.com/uc?id=16JQSTqZRGylnW0b-Ja-0W-bmkEJN6x7Q',
-'https://drive.google.com/uc?id=1ooD6lWBfNJqlCWPsjnA3_ljnj6ZxsL23',
-'https://drive.google.com/uc?id=1R_jQnkpVtGFVJvaU3OQWZrwJ7Bonh6Aq',
-'https://drive.google.com/uc?id=128uFVRiknNZbz94EZ72eZogfvg51PV4X',
-'https://drive.google.com/uc?id=1FtHBTJDd4XC790R3bDMq_AlT3lO54EGD',
-'https://drive.google.com/uc?id=1E11smuQ1mU0v_NQZoVGRcuhPBx3I_d9X',
-'https://drive.google.com/uc?id=1b2MWxPXn-cdFNzR-Z5cZr_9Mo6I3t3yC',
-'https://drive.google.com/uc?id=1BRLad7zW27hRKva_5ENo4RPHsAw7tjc1',
-'https://drive.google.com/uc?id=1dOpo1jwrtjuSl4ZnsV8C638TCaGRQJnB',
-'https://drive.google.com/uc?id=1d9z6JVFxc4x6pfCDbpGqOM-njCqKhA5Q',
-'https://drive.google.com/uc?id=1QMj7eIjvuPQ-i2ZSxwc11tsjHb08mpGi',
-'https://drive.google.com/uc?id=1O4FRRXJKKc6f4q7Ze1_idyJfYmMf2dDz',
-'https://drive.google.com/uc?id=1AJa9_7sQN6sUS_7iD6xCsne5QrJ0yWej',
-'https://drive.google.com/uc?id=1--X3vkDtwHrRD36PEkLBXwIrcHhnHAeg',
-'https://drive.google.com/uc?id=1Gy-TB9sU0-oGqV_Oe2-iwx7TKLbnJB-1',
-'https://drive.google.com/uc?id=1oi1xFxN5bTxSe2Va9omFhzoke7nsmDvI',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 39; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    // <?= ASSETS ?>/img/Constructora/piscina/piscina(1).jpg
+                    this.img.push(url_inicial + '/img/Constructora/piscina/piscina(' + (step + 1) + ').jpg');
+                   
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 

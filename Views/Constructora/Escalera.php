@@ -46,49 +46,49 @@
                 <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1Z24SnuGDUUr8lsEOhhZQ3u7X14bF6zrH' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(1).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1lfurJD__67LEEGJVNkljCSbeQGc9CKjR' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(2).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1QjArIO1TY9RXZ5mtUXEUKinohz0OM-KJ' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(3).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1L8FFHDWzxsJgLcG9IN6mryVwj4cnT2BE' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(4).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1FxiOziBkZymI4Lu-N6f8F_Ta5HNdR-55' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(5).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1-zi_9rM-oxpRe6eKouL_BWUAoYeH5Am7' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(6).jpg' width="100%"
                         alt="First slide">
 
                 </div>
                 <div class="carousel-item  vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1WMSocbqCg8dCcWMqIn7bce5aGp4Nl-ew' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(7).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -130,7 +130,7 @@
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                         alt="500x500" style="width: 500px; height: 350px;"
-                        src='https://drive.google.com/uc?id=1FHeh9ioY7GdXqtYpQoyeIZjwECXgUlXa'
+                        src='<?= ASSETS ?>/img/Constructora/escalera/escalera(3).jpg'
                         data-holder-rendered="true">
                 </div>
             </div>
@@ -576,74 +576,29 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-<script>
 
+<script>
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = [
-        'https://drive.google.com/uc?id=1Z24SnuGDUUr8lsEOhhZQ3u7X14bF6zrH',
-        'https://drive.google.com/uc?id=1lfurJD__67LEEGJVNkljCSbeQGc9CKjR',
-        'https://drive.google.com/uc?id=1QjArIO1TY9RXZ5mtUXEUKinohz0OM-KJ',
-        'https://drive.google.com/uc?id=1L8FFHDWzxsJgLcG9IN6mryVwj4cnT2BE',
-        'https://drive.google.com/uc?id=1FxiOziBkZymI4Lu-N6f8F_Ta5HNdR-55',
-        'https://drive.google.com/uc?id=1-zi_9rM-oxpRe6eKouL_BWUAoYeH5Am7',
-        'https://drive.google.com/uc?id=1WMSocbqCg8dCcWMqIn7bce5aGp4Nl-ew',
-        'https://drive.google.com/uc?id=1FHeh9ioY7GdXqtYpQoyeIZjwECXgUlXa',
-        'https://drive.google.com/uc?id=1EBWrC2tb_gCzTOuPUvs905BkMkS3s1pi',
-        'https://drive.google.com/uc?id=1xwFZ0DcKOyMwEs2F01nHzBq0IhNAmMW2',
-        'https://drive.google.com/uc?id=1o4FRO7wneMy1NIwTHifP3dNJyGasz0yE',
-        'https://drive.google.com/uc?id=18PXLjwmRFhVsERy8_s4U6Ya4bftFQbbn',
-        'https://drive.google.com/uc?id=1H6gvDwi4K6kJmbE4RpVE3c3GkSVWSGCf',
-        'https://drive.google.com/uc?id=1NhG784sZlDu3owLmAGJmio94geTJuGpw',
-        'https://drive.google.com/uc?id=1bFAYKyVDNASCs1iRvMRje-FHtOFwz523',
-        'https://drive.google.com/uc?id=1ByQy3MUOUL8QLVu3so9AYl8A7BqOty2i',
-        'https://drive.google.com/uc?id=1-BaNTUdyNIYudvs_t1RWtrC9CIdKhS3M',
-        'https://drive.google.com/uc?id=1_1kEqXd_lCISMPRzJhzhUn2UZasJmqL3',
-        'https://drive.google.com/uc?id=1NIP3YKIK4NXENpmau5Cwzf3NC017CCbx',
-        'https://drive.google.com/uc?id=1OFc1u1xymwUf26oCTu2X4T8EyRI8gFr-',
-        'https://drive.google.com/uc?id=17TlaUCF3W9Ef_raVUghyWm_iP4emrMCc',
-        'https://drive.google.com/uc?id=1FBzLyhStvhD8Ghne44hOFvWO1bZu6FPr',
-        'https://drive.google.com/uc?id=132vU5ONfG2IyF8Djmk2xjE8J-0Vu0k2e',
-        'https://drive.google.com/uc?id=1IfVw4oRJDJmyP7YsTDERELODyORWISTf',
-        'https://drive.google.com/uc?id=1aW4dm4pwxipCUpw5aw5awR6fjKJ0AzAu',
-        'https://drive.google.com/uc?id=1_XD-AUM5KZZCj8arrGh32wFvSMDyL4tl',
-        'https://drive.google.com/uc?id=1cbm4_A5U9hVzEj_3fqX_nt5OJtMREBxC',
-        'https://drive.google.com/uc?id=1MEILovufxJY8CqNfqZChwP9XHp_d4XFk',
-        'https://drive.google.com/uc?id=1WbHJoCH0KPerXvuQvqBeYA_Nqr6DyNW0',
-        'https://drive.google.com/uc?id=1UwnRc38hpi8J7FUzxz66Dy4mqrq0Guzo',
-        'https://drive.google.com/uc?id=1Frv7ZJ1QO0FcQzZl1TMCjKroFuJAgV6N',
-        'https://drive.google.com/uc?id=1nqikZNCGLwY8ruVnHlkskRPBRw8eoWVs',
-        'https://drive.google.com/uc?id=1qQCXiQl7Bs-RC9itbOIt3uxUSr0DHPWI',
-        'https://drive.google.com/uc?id=1UXSf93HvRx6Wmq0RSrevei9tYHuN1Ops',
-        'https://drive.google.com/uc?id=1JuJaBWzNhZYdwiS_0lGLIJ5qRRrAXC22',
-        'https://drive.google.com/uc?id=1WbDrxGcPphIh3LUXEHSZHEan9xZsxuwd',
-        'https://drive.google.com/uc?id=1Pt8ZHcZatpK9Z778Pk3UP6RDPEjYyDFG',
-        'https://drive.google.com/uc?id=1ADo_Cr7d2lnfwH6na_XVVLCy5UAyjvxh',
-        'https://drive.google.com/uc?id=1i9TCyxwSrpEcE_ggnLKcz7b5aEiAnHiq',
-        'https://drive.google.com/uc?id=1G8BJ_gBhaxQ2BrKzPTKo0A78-mJdW2XY',
-        'https://drive.google.com/uc?id=1_R14WBY_dmhvQD_dwgRdOmPqnZlxjAQE',
-        'https://drive.google.com/uc?id=1_R14WBY_dmhvQD_dwgRdOmPqnZlxjAQE',
-        'https://drive.google.com/uc?id=1YsBebxFKLPESq-IOAEK5DrJp1jKs94iF',
-        'https://drive.google.com/uc?id=1BoB0PaGNuXAWL4PXnn7PMlipjSrH2mJL',
-        'https://drive.google.com/uc?id=15mtv14f_GXVYHuAcvcJ8U87mTjJGGYbh',
-        'https://drive.google.com/uc?id=1IfyyhmPdvGyL7JKVCe8gRyBmu3tUurKz',
-        'https://drive.google.com/uc?id=132vU5ONfG2IyF8Djmk2xjE8J-0Vu0k2e',
-        'https://drive.google.com/uc?id=1IfVw4oRJDJmyP7YsTDERELODyORWISTf',
-        'https://drive.google.com/uc?id=1aW4dm4pwxipCUpw5aw5awR6fjKJ0AzAu',
-        'https://drive.google.com/uc?id=1_XD-AUM5KZZCj8arrGh32wFvSMDyL4tl',
-        'https://drive.google.com/uc?id=1cbm4_A5U9hVzEj_3fqX_nt5OJtMREBxC',
-        'https://drive.google.com/uc?id=1MEILovufxJY8CqNfqZChwP9XHp_d4XFk',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 48; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    // <?= ASSETS ?>/img/Constructora/escalera/escalera(1).jpg
+                    this.img.push(url_inicial + '/img/Constructora/escalera/escalera(' + (step + 1) + ').jpg');
+                   
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 

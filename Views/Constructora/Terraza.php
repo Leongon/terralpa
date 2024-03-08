@@ -46,7 +46,7 @@
                 <div class="carousel-item active vh-100" data-bs-interval="2000">
 
                     <img class="first-slide img-top-full"
-                        src='https://drive.google.com/uc?id=1y6TBADTTNOJP4IMgIOdxtCg9ElZN1QUx' width="100%"
+                        src='<?= ASSETS ?>/img/Constructora/terraza/terraza(1).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -54,7 +54,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=16kwu68-mpYr8kRT039NAELNwOOmslALU' width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(2).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -62,7 +62,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=1AQoUHCVMd2mDIR2InTOESKNSVtMrufX3' width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(3).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -70,7 +70,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=1_eUjZzOe-NH0tZ6MosR2t9hTlG0Ds5JL' width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(4).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -78,7 +78,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=1lsVr0f7-z14hjfmWt3W-YP2tPT7jSmnP' width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(5).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -86,7 +86,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=1K4UIBIUkNiSwQI7Cluq9sAd_L21y800s' width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(6).jpg' width="100%"
                         alt="First slide">
 
                 </div>
@@ -94,7 +94,7 @@
 
                     <img class="first-slide img-top-full"
                         src=
-        'https://drive.google.com/uc?id=14QDYE7f0ONzggNc8e5gZL2ZmGWEaf7Yf'width="100%"
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(7).jpg'width="100%"
                         alt="First slide">
 
                 </div>
@@ -137,7 +137,7 @@
                     <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto"
                         alt="500x500" style="width: 500px; height: 350px;"
                         src=
-        'https://drive.google.com/uc?id=1_1GvSMxfLPr0EpWEOx8dmvRVgvHi1cne'
+        '<?= ASSETS ?>/img/Constructora/terraza/terraza(5).jpg'
                         data-holder-rendered="true">
                 </div>
             </div>
@@ -583,69 +583,29 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-<script>
 
+<script>
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = ['https://drive.google.com/uc?id=1y6TBADTTNOJP4IMgIOdxtCg9ElZN1QUx',
-        'https://drive.google.com/uc?id=16kwu68-mpYr8kRT039NAELNwOOmslALU',
-        'https://drive.google.com/uc?id=1AQoUHCVMd2mDIR2InTOESKNSVtMrufX3',
-        'https://drive.google.com/uc?id=1_eUjZzOe-NH0tZ6MosR2t9hTlG0Ds5JL',
-        'https://drive.google.com/uc?id=1lsVr0f7-z14hjfmWt3W-YP2tPT7jSmnP',
-        'https://drive.google.com/uc?id=1K4UIBIUkNiSwQI7Cluq9sAd_L21y800s',
-        'https://drive.google.com/uc?id=14QDYE7f0ONzggNc8e5gZL2ZmGWEaf7Yf',
-        'https://drive.google.com/uc?id=1_1GvSMxfLPr0EpWEOx8dmvRVgvHi1cne',
-        'https://drive.google.com/uc?id=1-6uaw6qsASCEa0ICKec_bTlGWmB4GaG4',
-        'https://drive.google.com/uc?id=1x2OaS9G62dPiCCWxxiDc1enTTVq2EbOK',
-        'https://drive.google.com/uc?id=1PDWFUkDDWd5uOPWROGtF-0yJI3xeTq8j',
-        'https://drive.google.com/uc?id=1J0kQH8mbP4ll6AKspkeLLOqrRLbQ2X2T',
-        'https://drive.google.com/uc?id=1kB6-v7Du5rnMMeiCVv9fJlHCnPqd-iRR',
-        'https://drive.google.com/uc?id=1Q93Vu9dXQ_fLXuSldvgrJdf3BpN_FWAC',
-        'https://drive.google.com/uc?id=1TSyXbQpti7jULG2Bg7VwbibdZrHlokmo',
-        'https://drive.google.com/uc?id=1sshwX0EgYljHKy9MGWiyq5g6U5aTilX-',
-        'https://drive.google.com/uc?id=1BizQ2MCJOdUTVJFsGv5aUXAgKnz23xv6',
-        'https://drive.google.com/uc?id=1nFAyZaId6vGQOLOsVzyiiXi54tDoTd-h',
-        'https://drive.google.com/uc?id=17__G8d_dJyWMtWEx_pGP2cxWDpHWdFNz',
-        'https://drive.google.com/uc?id=171nfEH2mwRKRaDVCakVSc-bnh_6Tepwf',
-        'https://drive.google.com/uc?id=1fNwZrUgHMxEskQrGUs0EuHMZGoUvu2Ql',
-        'https://drive.google.com/uc?id=1dT4frifQHF6aubHM_LeqJS_BFSam7MvC',
-        'https://drive.google.com/uc?id=1T2gg4UXgEMSQljQp4aL2Nf2BITYEB_Fa',
-        'https://drive.google.com/uc?id=10-w9o2f5jVMoDQHUz_r-tkAt_RRYgN76',
-        'https://drive.google.com/uc?id=1VSq89lRsx7QU_RBSr_6wAZfLaZThyuHv',
-        'https://drive.google.com/uc?id=1TZN0GWnpkUNID2Y3Q2nTjNy1Z1Ykjgc9',
-        'https://drive.google.com/uc?id=12icg9eBscSXDIr0J9Z-Uo2fvm24OkEXZ',
-        'https://drive.google.com/uc?id=1MkmQ56ZsEBkpoOd-jI98KLfUdu6hrArr',
-        'https://drive.google.com/uc?id=1dgkyNJubW5-Ug3tp8l0AEDk_BAX4Hfuu',
-        'https://drive.google.com/uc?id=1WqJxo5iRduKyB_YIEarHfjIcrHFqzVg7',
-        'https://drive.google.com/uc?id=1Kocr8tgS-WakfrFTLhD814OyCtA28TtH',
-        'https://drive.google.com/uc?id=1CBq9FaGeQ72Cqpqc2U3RRrJV5z99KhmE',
-        'https://drive.google.com/uc?id=1nDnk0nN-_DWTkqDlB4Qugc6RpyjLXq8U',
-        'https://drive.google.com/uc?id=1LlN7KwCg0BViGHJlQKxxUS5f_PNlrxmf',
-        'https://drive.google.com/uc?id=1JMLjPho-HA3TFnZZ6y1FYalHHlrvVtVp',
-        'https://drive.google.com/uc?id=14FSnKj-t2MzH7DK8JL9XY8H7xPKrFIsQ',
-        'https://drive.google.com/uc?id=1wcberfJ60SkJbqHi_sMnIeRUM34naJkL',
-        'https://drive.google.com/uc?id=1Btx75C0_8YZq9qspbRuv5CGPVVkxavZ0',
-        'https://drive.google.com/uc?id=1C_GcBzkViyMboRvCffjpKiM_hhUomHge',
-        'https://drive.google.com/uc?id=1kqAfzr5hlWbq4nyislNuPtDn3otLOZoF',
-        'https://drive.google.com/uc?id=1_rz22xOJ9cOzwLx8LswTGC0K1O4hyKiX',
-        'https://drive.google.com/uc?id=1kXhJR6z_TjW4kx6MGJUOZJ51MTKk5Yxx',
-        'https://drive.google.com/uc?id=1iOtMZEtup4FTm-P7Es2-y2e0LWIpi9WD',
-        'https://drive.google.com/uc?id=16Ym3F1yYqzgtZ54-Zt-8CHFNpYBG41nC',
-        'https://drive.google.com/uc?id=1NoPfhe9EARmXH96L84hnfXrdd8tGwnpS',
-        'https://drive.google.com/uc?id=1DwP2CDYkPCIdt3VyyAJXqPPqA4uFto_N',
-        'https://drive.google.com/uc?id=1CYPWtSpvTRfOkk8ntzVMLOBKj64hKO5h',
-        'https://drive.google.com/uc?id=1qTd5ubJV7fpRmSZzyjAHBObVSnRhx0j2',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 48; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    // <?= ASSETS ?>/img/Constructora/terraza/terraza(1).jpg
+                    this.img.push(url_inicial + '/img/Constructora/terraza/terraza(' + (step + 1) + ').jpg');
+                   
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 

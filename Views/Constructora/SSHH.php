@@ -44,46 +44,46 @@
 
       <div class="carousel-item active vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1swLc2L3IDDtXcmoEs9zxUoGduZYX2yjM'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(1).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=15M7jE_BIWqcgmKg0jrHzx-BkSf2j9Y-2'
+'<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(2).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=15SI7nD3ybz-nXloepwLLepeo-tiGbQ9m'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(3).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1Cr2bfF-bzrALGiC9QFMpHlflgg6ifhPy'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(4).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
-        <img class="first-slide img-top-full" src='https://drive.google.com/uc?id=1Lp9dEdLQdjLCY0eFznxoEsoaaMAj28Ph'
-          width="100%" alt="First slide">
-
-      </div>
-      <div class="carousel-item  vh-100" data-bs-interval="2000">
-
-        <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=1G7OWnAClZHqmuCmnTGIL8x6rYqmSE7g5'
+        <img class="first-slide img-top-full" src='<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(5).jpg'
           width="100%" alt="First slide">
 
       </div>
       <div class="carousel-item  vh-100" data-bs-interval="2000">
 
         <img class="first-slide img-top-full" src=
-'https://drive.google.com/uc?id=16YrR0mxh4NplA5wunOo7MMj0N-9vT_Jl'
+'<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(6).jpg'
+          width="100%" alt="First slide">
+
+      </div>
+      <div class="carousel-item  vh-100" data-bs-interval="2000">
+
+        <img class="first-slide img-top-full" src=
+'<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(7).jpg'
           width="100%" alt="First slide">
 
       </div>
@@ -122,7 +122,7 @@
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto shadows-1    " data-src="holder.js/500x500/auto" alt="500x500"
-          style="width: 500px; height: 350px;" src='https://drive.google.com/uc?id=1tk0ZGSgDsJ65Dox4-vduQPVQc4NK0OcW' data-holder-rendered="true">
+          style="width: 500px; height: 350px;" src='<?= ASSETS ?>/img/Constructora/ss-hh/ss-hh(5).jpg' data-holder-rendered="true">
       </div>
     </div>
 
@@ -568,44 +568,25 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
-
+    const url_inicial = '<?= ASSETS ?>';
     const { createApp } = Vue
 
-    img = ['https://drive.google.com/uc?id=1swLc2L3IDDtXcmoEs9zxUoGduZYX2yjM',
-'https://drive.google.com/uc?id=15M7jE_BIWqcgmKg0jrHzx-BkSf2j9Y-2',
-'https://drive.google.com/uc?id=15SI7nD3ybz-nXloepwLLepeo-tiGbQ9m',
-'https://drive.google.com/uc?id=1Cr2bfF-bzrALGiC9QFMpHlflgg6ifhPy',
-'https://drive.google.com/uc?id=1Lp9dEdLQdjLCY0eFznxoEsoaaMAj28Ph',
-'https://drive.google.com/uc?id=1G7OWnAClZHqmuCmnTGIL8x6rYqmSE7g5',
-'https://drive.google.com/uc?id=16YrR0mxh4NplA5wunOo7MMj0N-9vT_Jl',
-'https://drive.google.com/uc?id=1tk0ZGSgDsJ65Dox4-vduQPVQc4NK0OcW',
-'https://drive.google.com/uc?id=1WX_n-d_0TtYh1DbGDBYhnCajNUYAhgNJ',
-'https://drive.google.com/uc?id=11rtCUzwUqCsxXrTO7Ez-04yOlvMTHhEI',
-'https://drive.google.com/uc?id=1xZq-XGVXTP9-ZuiHP9PAVXzs7GGfL5Ky',
-'https://drive.google.com/uc?id=1emaDYFx79n88pWs1GLYhhxqzScPM0LGp',
-'https://drive.google.com/uc?id=1dI4dNwVHjZcmbgEOShrf6FsJL9ke1fN_',
-'https://drive.google.com/uc?id=1KlBDas1M3r3zAjwwtfnfIQhDMeQ-qGCN',
-'https://drive.google.com/uc?id=1NPhxh8I4fKZM9dlnRFlGAKq6iIyazYie',
-'https://drive.google.com/uc?id=1adjMH9xntTRLUS_d2gmAZ6juEaw9ep3p',
-'https://drive.google.com/uc?id=1AZbQVzp0s_zSfxkWVOW-I02q22kATguf',
-'https://drive.google.com/uc?id=1VJCk8E1kpAp6na6Xd0jNkIKfvSO16bT5',
-'https://drive.google.com/uc?id=12HhM8d6CbxGidgr6dbygywPSHvd7Vurg',
-'https://drive.google.com/uc?id=1dKxYoL0p8YUUxW9DIk_3mGI1gxH7i-i6',
-'https://drive.google.com/uc?id=1uUWZi_SuCtjg-vE5rcBcCULvEle2Rb5B',
-'https://drive.google.com/uc?id=1D8qm7lYKYbwlXxG6aKWzRm9vRyC-Cqqb',
-'https://drive.google.com/uc?id=1R6pOC2YcWbzJXJO1l3QqbshqeztlkQux',
-'https://drive.google.com/uc?id=1kmJh0UX9t_Y2K7TTe8ZR5KSSrF_BVAQz',
-    ]
     app = {
         data() {
             return {
-                img: img,
+                img: [],
             }
         },
         methods: {
             async ListInmo() {
 
+                for (let step = 0; step < 24; step++) {
+                    // Se ejecuta 5 veces, con valores del paso 0 al 4.
+                    this.img.push(url_inicial + '/img/Constructora/ss-hh/ss-hh(' + (step + 1) + ').jpg');
+                }
+
                 console.log(this.img)
+
             },
             async masonry() {
 
