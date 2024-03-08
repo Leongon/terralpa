@@ -7,18 +7,18 @@ define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
 /*             CONSTANTES PARA CONEXION DB                  */
 /* ----------------------------------------------------- */
-
+/* 
  const DB_HOST = "162.214.204.218";
 const DB_NAME = "terralpc_proforma";
 const DB_USER = "terralpc_terralpc";
 const DB_PASSWORD = 'Bl@ckl30n2023';
 const DB_CHARSET = "utf8";     
- /*
+*/
 const DB_HOST = "localhost";
 const DB_NAME = "terralpc_proforma";
 const DB_USER = "root";
 const DB_PASSWORD = '';
-const DB_CHARSET = "utf8"; */
+const DB_CHARSET = "utf8"; 
 
 /* ----------------------------------------------------- */
 /*             INFORMACION DEL SITIO                  */
