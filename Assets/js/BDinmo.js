@@ -14,15 +14,13 @@ TerrenosVenta = [
         departament:"Ayacucho",
         part_terreno: {
             uno: "3 Dormitorios",
-
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=11-ZLMQuqwqrmMiComCLXEU1P1uJy8ALZ',
+            img: url_inicial+'/img/Inmobiliaria/Productos/Departamento-3er-piso(interior)zona-céntrica.jpeg',
 
         },
         
-
 
         ]
     },
@@ -42,7 +40,7 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=14Qbei6lTPt3mWJyhLKJywAk4ByEAUjs1',
+            img: url_inicial+'/img/Inmobiliaria/Productos/San-juan-de-Dios-(C.P.tambala-V-Lote-2B).jpeg',
             titulo: "Sala"
         },
 
@@ -67,7 +65,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=1PkLYwSv8_bR2Ez_-sMNOdxWe8ctV4mqt',
+            img: url_inicial+'/img/Inmobiliaria/Productos/Departamento4topiso(interior)zonacéntrica.png',
+        
             titulo: "Sala"
         },
 
@@ -92,7 +91,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=14NyKH7MV75vE9OFewxkpbbuuvSkydspu',
+            img: url_inicial+'/img/Inmobiliaria/Productos/Departamento5topiso(interior)zonacéntrica.png',
+    
             titulo: "Sala"
         },
 
@@ -116,7 +116,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=1Es7xZIB4T1K76X-pjkc5E9w3WtxC9Okp',
+            img: url_inicial+'/img/Inmobiliaria/Productos/AndresAvelinoCaceresAyacucho.png',
+          
             titulo: "Sala"
         },
 
@@ -140,7 +141,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=1tz2TwDycRZt36bMnPUicE1cSDXw7BKlF',
+            img: url_inicial+'/img/Inmobiliaria/Productos/CasaCompleta.png',
+         
             titulo: "Sala"
         },
 
@@ -164,7 +166,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=14aqJn1Tmy-esqiICo4vRLH6E2Jy09Oqg',
+            img: url_inicial+'/img/Inmobiliaria/Productos/9deDiciembre360-344,Ayacucho.jpeg',
+         
             titulo: "Sala"
         },
 
@@ -188,13 +191,14 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=14_PBr__HR4266toHwHhxqGxaWxlRj4Y0',
+            img: url_inicial+'/img/Inmobiliaria/Productos/Terrenovacio.jpeg',
+            
             titulo: "Sala"
         },
 
 
         ]
-
+       
     },
     {
         id: "7",
@@ -212,7 +216,8 @@ TerrenosVenta = [
         },
         img: [{
             id: 1,
-            img: 'https://drive.google.com/uc?id=1JVhdwIdTfR10Ci1mjPYBIrVIxGUai55T',
+            img: url_inicial+'/img/Inmobiliaria/Productos/AlquilerdeGalerias.jpeg',
+
             titulo: "Sala"
         },
 

@@ -185,7 +185,9 @@ document.querySelector(".imgLogo").src="<?= get_logo_inmobiliaria()?>";
   <!-- Button trigger modal -->
 
 </div>
-
+<script>
+   const url_inicial = '<?= ASSETS ?>';
+</script>
 <?php footer() ?>
 <script src="<?= ASSETS ?>/js/BDinmo.js"></script>
 
